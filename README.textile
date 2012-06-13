@@ -1,0 +1,49 @@
+h2. Common Content
+
+Common Content is a Rails Engine Gem that provides a mini-CMS (Content Management System) based upon Mongoid/MongoDB and Bootstrap.
+
+The purpose of Common Content (CC) is to provide a easy, pluggable way for Mongoid-based Rails sites to give users the ability to edit the blocks of content that appear within the site.  CC is not a full-fledged CMS system, it's a simplified way that site admins can create blocks of content using a streamlined DSL and then content producers can maintain and edit the content setup by the admins or 'editors'.
+
+
+h3. Installation
+
+CC must be hosted within a Rails 3.x app that also includes Mongoid.  CC does not specify a Mongoid connection and relies on the host app for Mongoid config. 
+
+In your gemfile
+
+gem 'mongoid'
+gem 'common-content'
+
+`bundle install`
+
+h3. Using
+
+The DSL for CC is meant to give you a simple way to create a few types of content elements.  The editor defines each 'instance' of content and the elements that it contains using the DSL.  The client can then create/maintain the content blocks and are restricted to the elements the site admin defines.
+
+Every content instance is named by a :slug that must be unique
+
+The expectation is that your site will most likely use the JSON output of the content blocks and include them using jQuery or similar.  Each content instance is available via an html `show` page as well.
+
+|_.DSL                         |_.EDITOR                                   |_.JSON|
+----
+:text title max:50     <input type='text' name='title'>             'title': 'something...'
+:textile body max:2000  <input type='textarea' name='body' class='textile-editor'>   'body': '<div>...</div>'
+:list images min:1 max:4  ... some sortable url picker ...        'images':['/images/foo.png', 'images/bar.png']
+:list faq_entries min:1 source:'/faq.json'  .. some picker ..     'faq_entries':['']
+:date birthday          <input type'text' class='datepicker'>      'birthday':'2000-01-01 12:34:56'
+:dictionary faq       ...a sortable list of definition pairs...    'faq':{'one':'1', 'two','2'...}
+:include 'some-slug'   ... include another contents edit view...   'some-slug':{.......}
+
+
+h3. TODO
+
+A lot...     
+
+Figure out how to link to other content via a HATEOS type url and be able to pick items and
+order them.   How to edit sub-content, just link to it's show page?  Add bootstrap as the styling
+for the UI.  Restrict definition and creation to the editor role or login. Add more meta-types like
+FAQ, definition, etc.
+
+== See Also
+
+link:https://github.com/deathbob/Contentment
