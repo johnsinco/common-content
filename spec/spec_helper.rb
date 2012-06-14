@@ -31,9 +31,9 @@ RSpec.configure do |config|
   # automatically. This will be the default behavior in future versions of
   # rspec-rails.
   config.infer_base_class_for_anonymous_controllers = false
-  config.generators do |g|
-   g.orm :mongoid
-   g.test_framework :rspec, :fixture_replacement => :factory_girl
-   g.integration_tool :rspec
-  end
+  # config.generators do |g|
+  #  g.orm :mongoid
+  #  g.test_framework :rspec, :fixture_replacement => :factory_girl
+  #  g.integration_tool :rspec
+  # end
 end

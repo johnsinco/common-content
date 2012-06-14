@@ -23,3 +23,21 @@ MONGODB [DEBUG] Logging level is currently :debug which could negatively impact 
 MONGODB (0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
 MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
 MONGODB (0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+Processing by ContentsController#index as HTML
+Completed 500 Internal Server Error in 28ms
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+Processing by ContentsController#index as HTML
+  Rendered /Users/john/projects/common-content/app/views/contents/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 28ms (Views: 27.3ms)
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+Processing by ContentsController#index as HTML
+  Rendered /Users/john/projects/common-content/app/views/contents/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 7ms (Views: 7.0ms)
