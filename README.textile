@@ -26,13 +26,13 @@ The expectation is that your site will most likely use the JSON output of the co
 
 |_.DSL                         |_.EDITOR                                   |_.JSON|
 ----
-:text title max:50     <input type='text' name='title'>             'title': 'something...'
-:textile body max:2000  <input type='textarea' name='body' class='textile-editor'>   'body': '<div>...</div>'
-:list images min:1 max:4  ... some sortable url picker ...        'images':['/images/foo.png', 'images/bar.png']
-:list faq_entries min:1 source:'/faq.json'  .. some picker ..     'faq_entries':['']
-:date birthday          <input type'text' class='datepicker'>      'birthday':'2000-01-01 12:34:56'
-:dictionary faq       ...a sortable list of definition pairs...    'faq':{'one':'1', 'two','2'...}
-:include 'some-slug'   ... include another contents edit view...   'some-slug':{.......}
+|:text title max:50     |<input type='text' name='title'>            | 'title': 'something...'|
+|:textile body max:2000  |<input type='textarea' name='body' class='textile-editor'>   |'body': '<div>...</div>'|
+|:list images min:1 max:4  |... some sortable url picker ...        |'images':['/images/foo.png', 'images/bar.png']|
+|:list faq_entries min:1 source:'/faq.json'  |.. some picker ..     |'faq_entries':['']|
+|:date birthday          |<input type'text' class='datepicker'>     | 'birthday':'2000-01-01 12:34:56'|
+|:dictionary faq       |...a sortable list of definition pairs...   | 'faq':{'one':'1', 'two','2'...}|
+|:include 'some-slug'  |... include another contents edit view...   |'some-slug':{.......})|
 
 
 h3. TODO
