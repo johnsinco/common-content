@@ -41,3 +41,38 @@ MONGODB (0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
 Processing by ContentsController#index as HTML
   Rendered /Users/john/projects/common-content/app/views/contents/index.html.erb within layouts/application (1.2ms)
 Completed 200 OK in 7ms (Views: 7.0ms)
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+Processing by ContentsController#index as HTML
+  Rendered /Users/john/projects/common-content/app/views/contents/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 8ms (Views: 7.3ms)
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+Processing by ContentsController#index as HTML
+  Rendered /Users/john/projects/common-content/app/views/contents/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 8ms (Views: 7.2ms)
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+Processing by ContentsController#index as HTML
+  Rendered /Users/john/projects/common-content/app/views/contents/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 22ms (Views: 21.5ms)
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+Processing by ContentsController#index as HTML
+  Rendered /Users/john/projects/common-content/app/views/contents/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 7ms (Views: 7.0ms)
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+Processing by ContentsController#index as HTML
+  Rendered /Users/john/projects/common-content/app/views/contents/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 7ms (Views: 6.8ms)
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+Processing by ContentsController#index as HTML
+  Rendered /Users/john/projects/common-content/app/views/contents/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 9ms (Views: 8.2ms)
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+Processing by ContentsController#index as HTML
+  Rendered /Users/john/projects/common-content/app/views/contents/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 7ms (Views: 7.0ms)
