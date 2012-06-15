@@ -16,11 +16,20 @@ class Content
     definition.definition
   end
 
+  def self.all_entries
+    Content::Definition.all.each {|defn| define_class(defn.content_type, defn.definition) }
+    Content.all
+  end
+
   def self.build(slug, defn)
     # create an object from the name
-    classname = slug.gsub(/-/, '_').classify
+    classname = classify(slug)
     define_class(classname, defn)
     const_get(classname).new(slug: slug, defn: defn)
+  end
+
+  def self.classify(slug)
+    slug.gsub(/-/, '_').classify
   end
 
   def self.define_class(classname, defn)
@@ -30,7 +39,8 @@ class Content
 
   class Definition
     include Mongoid::Document
-    belongs_to :content
+    belongs_to :content, polymorphic: true
+    field :slug
     field :definition, type: String
- end
+  end
 end
