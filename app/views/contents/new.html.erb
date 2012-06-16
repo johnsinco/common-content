@@ -1,0 +1,8 @@
+<%- model_class = @content.class -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => t('helpers.titles.new', :model => model_class.model_name.human,
+                                 :default => "New #{model_class.model_name.human}") %></h1>
+</div>
+<%= form_for @content, :url => contents_path, :as => :content, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= render :partial => 'form', :locals => {f: f} %>
+<% end %>

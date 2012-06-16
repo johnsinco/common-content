@@ -15,4 +15,5 @@ capybara-*.html
 /spec/dummy/tmp/*
 **.orig
 rerun.txt
+*.log
 pickle-email-*.html

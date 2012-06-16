@@ -1,6 +1,7 @@
 development:
   host: localhost
   database: dummy_development
+  allow_dynamic_fields: false
 
 test:
   host: localhost

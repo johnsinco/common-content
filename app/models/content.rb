@@ -1,8 +1,8 @@
 class Content
   include Mongoid::Document
+  include Mongoid::Timestamps
 
   field :slug, type: String
-  key :slug
   has_one :definition, :class_name => 'Content::Definition', autosave: true
   accepts_nested_attributes_for :definition
 
@@ -26,6 +26,11 @@ class Content
     classname = classify(slug)
     define_class(classname, defn)
     const_get(classname).new(slug: slug, defn: defn)
+  end
+
+  def renovate(defn)
+    self.definition.definition = defn
+    Content.define_class(self.class.name, defn)
   end
 
   def self.classify(slug)
