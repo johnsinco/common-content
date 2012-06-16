@@ -40,6 +40,19 @@ class ContentsController < ApplicationController
     end
   end
 
+  def update
+    Content.all_entries
+    @content = Content.find(params[:id])
+    if @content.update_attributes(params[:content])
+      redirect_to contents_path, notice: "#{@content.slug} created."
+    else
+      respond_to do |format|
+        format.html { render action: "edit" }
+        format.json { render json: @foo.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
   # PUT /foos/1
   # PUT /foos/1.json
   def renovate
@@ -49,7 +62,7 @@ class ContentsController < ApplicationController
       respond_with @content
     else
       respond_to do |format|
-        format.html { render action: "edit" }
+        format.html { render action: "define" }
         format.json { render json: @foo.errors, status: :unprocessable_entity }
       end
     end
