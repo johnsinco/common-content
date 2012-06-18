@@ -14,7 +14,7 @@ class ContentsController < ApplicationController
   end
 
   def edit
-    # Content.all_entries
+    Content.all_entries
     @content = Content.find(params[:id])
   end
 
@@ -57,6 +57,7 @@ class ContentsController < ApplicationController
   # PUT /foos/1
   # PUT /foos/1.json
   def renovate
+    Content.all_entries
     @content = Content.find(params[:id])
     @content.renovate(params[:content][:defn])
     if @content.save

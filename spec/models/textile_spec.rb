@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'RedCloth'
 
-describe RedCloth::TextileDoc do
+describe Textile do
   subject { RedCloth.new('h1. Red Foo, a TRUE party rocka!')}
   it 'can drop-in replace String' do
     subject.should == 'h1. Red Foo, a TRUE party rocka!'
@@ -15,11 +15,12 @@ describe RedCloth::TextileDoc do
   # end
   context '# mongoid serialize' do
     it 'can be read/written from mongoid as a string' do
-      c = Content.build('redfoo', 'field :textile, type:RedCloth::TextileDoc')
+      c = Content.build('redfoo', 'field :textile, type:Textile')
       c.textile = 'h1. Red Foo, a TRUE party rocka!'
       c.save
       d = Content.find(c.id)
       d.textile.should == 'h1. Red Foo, a TRUE party rocka!' 
+      d.textile.to_html.should == "<h1>Red Foo, a <span class=\"caps\">TRUE</span> party rocka!</h1>"
     end
   end
 end
