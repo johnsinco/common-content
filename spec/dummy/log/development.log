@@ -40715,3 +40715,1096 @@ ActionController::RoutingError (No route matches [GET] "/images/favicon.ico"):
 
 
   Rendered /Users/john/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+WARNING: Can't mass-assign protected attributes: slug
+WARNING: Can't mass-assign protected attributes: slug
+
+
+Started GET "/contents" for 127.0.0.1 at 2012-06-18 07:42:26 -0600
+Processing by ContentsController#index as HTML
+MONGODB (1ms) dummy_development['system.namespaces'].find({})
+MONGODB (1ms) dummy_development['content_definitions'].find({})
+MONGODB (0ms) dummy_development['system.namespaces'].find({})
+MONGODB (0ms) dummy_development['contents'].find({})
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.0. Use ':data => { :confirm => 'Text' }' instead. (called from block in ___sers_john_projects_common_content_app_views_contents_index_html_erb__1693872408675508955_70220069879280 at /Users/john/projects/common-content/app/views/contents/index.html.erb:23)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.0. Use ':data => { :confirm => 'Text' }' instead. (called from block in ___sers_john_projects_common_content_app_views_contents_index_html_erb__1693872408675508955_70220069879280 at /Users/john/projects/common-content/app/views/contents/index.html.erb:23)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.0. Use ':data => { :confirm => 'Text' }' instead. (called from block in ___sers_john_projects_common_content_app_views_contents_index_html_erb__1693872408675508955_70220069879280 at /Users/john/projects/common-content/app/views/contents/index.html.erb:23)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.0. Use ':data => { :confirm => 'Text' }' instead. (called from block in ___sers_john_projects_common_content_app_views_contents_index_html_erb__1693872408675508955_70220069879280 at /Users/john/projects/common-content/app/views/contents/index.html.erb:23)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.0. Use ':data => { :confirm => 'Text' }' instead. (called from block in ___sers_john_projects_common_content_app_views_contents_index_html_erb__1693872408675508955_70220069879280 at /Users/john/projects/common-content/app/views/contents/index.html.erb:23)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.0. Use ':data => { :confirm => 'Text' }' instead. (called from block in ___sers_john_projects_common_content_app_views_contents_index_html_erb__1693872408675508955_70220069879280 at /Users/john/projects/common-content/app/views/contents/index.html.erb:23)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.0. Use ':data => { :confirm => 'Text' }' instead. (called from block in ___sers_john_projects_common_content_app_views_contents_index_html_erb__1693872408675508955_70220069879280 at /Users/john/projects/common-content/app/views/contents/index.html.erb:23)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.0. Use ':data => { :confirm => 'Text' }' instead. (called from block in ___sers_john_projects_common_content_app_views_contents_index_html_erb__1693872408675508955_70220069879280 at /Users/john/projects/common-content/app/views/contents/index.html.erb:23)
+  Rendered /Users/john/projects/common-content/app/views/contents/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 68ms (Views: 20.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-18 07:42:26 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-06-18 07:42:26 -0600
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-06-18 07:42:26 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contents.css?body=1" for 127.0.0.1 at 2012-06-18 07:42:26 -0600
+Served asset /contents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-18 07:42:26 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-18 07:42:26 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/content.js?body=1" for 127.0.0.1 at 2012-06-18 07:42:26 -0600
+Served asset /content.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foos.js?body=1" for 127.0.0.1 at 2012-06-18 07:42:26 -0600
+Served asset /foos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-18 07:42:26 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contents.js?body=1" for 127.0.0.1 at 2012-06-18 07:42:26 -0600
+Served asset /contents.js - 304 Not Modified (0ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2012-06-18 07:42:26 -0600
+
+ActionController::RoutingError (No route matches [GET] "/images/favicon.ico"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/john/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/john/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/john/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/john/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/contents/4fdba4c84841efca2f000005/edit" for 127.0.0.1 at 2012-06-18 07:42:28 -0600
+Processing by ContentsController#edit as HTML
+  Parameters: {"id"=>"4fdba4c84841efca2f000005"}
+MONGODB (0ms) dummy_development['contents'].find({:_id=>BSON::ObjectId('4fdba4c84841efca2f000005')}).limit(-1).sort([[:_id, :asc]])
+  Rendered /Users/john/projects/common-content/app/views/contents/edit.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 15ms (Views: 13.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-18 07:42:28 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-06-18 07:42:28 -0600
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-18 07:42:28 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contents.css?body=1" for 127.0.0.1 at 2012-06-18 07:42:28 -0600
+Served asset /contents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-06-18 07:42:28 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-18 07:42:28 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/content.js?body=1" for 127.0.0.1 at 2012-06-18 07:42:28 -0600
+Served asset /content.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contents.js?body=1" for 127.0.0.1 at 2012-06-18 07:42:28 -0600
+Served asset /contents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foos.js?body=1" for 127.0.0.1 at 2012-06-18 07:42:28 -0600
+Served asset /foos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-18 07:42:28 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/contents/4fdba4c84841efca2f000005/images/favicon.ico" for 127.0.0.1 at 2012-06-18 07:42:28 -0600
+
+ActionController::RoutingError (No route matches [GET] "/contents/4fdba4c84841efca2f000005/images/favicon.ico"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/john/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/john/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/john/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/john/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2012-06-18 07:42:31 -0600
+
+ActionController::RoutingError (No route matches [GET] "/images/favicon.ico"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/john/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/john/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/john/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/john/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/contents/4fdbf7764841efcb8a00001a/edit" for 127.0.0.1 at 2012-06-18 07:42:32 -0600
+Processing by ContentsController#edit as HTML
+  Parameters: {"id"=>"4fdbf7764841efcb8a00001a"}
+MONGODB (0ms) dummy_development['contents'].find({:_id=>BSON::ObjectId('4fdbf7764841efcb8a00001a')}).limit(-1).sort([[:_id, :asc]])
+  Rendered /Users/john/projects/common-content/app/views/contents/edit.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 10ms (Views: 8.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-18 07:42:32 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-06-18 07:42:32 -0600
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-06-18 07:42:32 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contents.css?body=1" for 127.0.0.1 at 2012-06-18 07:42:32 -0600
+Served asset /contents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-18 07:42:32 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-18 07:42:32 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/content.js?body=1" for 127.0.0.1 at 2012-06-18 07:42:32 -0600
+Served asset /content.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contents.js?body=1" for 127.0.0.1 at 2012-06-18 07:42:32 -0600
+Served asset /contents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foos.js?body=1" for 127.0.0.1 at 2012-06-18 07:42:32 -0600
+Served asset /foos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-18 07:42:32 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/contents/4fdbf7764841efcb8a00001a/images/favicon.ico" for 127.0.0.1 at 2012-06-18 07:42:32 -0600
+
+ActionController::RoutingError (No route matches [GET] "/contents/4fdbf7764841efcb8a00001a/images/favicon.ico"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/john/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/john/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/john/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/john/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2012-06-18 07:42:34 -0600
+
+ActionController::RoutingError (No route matches [GET] "/images/favicon.ico"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/john/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/john/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/john/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/john/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/contents/4fdbf7764841efcb8a00001a/define" for 127.0.0.1 at 2012-06-18 07:42:36 -0600
+Processing by ContentsController#define as HTML
+  Parameters: {"id"=>"4fdbf7764841efcb8a00001a"}
+MONGODB (0ms) dummy_development['content_definitions'].find({})
+MONGODB (0ms) dummy_development['contents'].find({:_id=>BSON::ObjectId('4fdbf7764841efcb8a00001a')}).limit(-1).sort([[:_id, :asc]])
+MONGODB (1ms) dummy_development['content_definitions'].find({"content_id"=>BSON::ObjectId('4fdbf7764841efcb8a00001a')}).limit(-1).sort([[:_id, :asc]])
+  Rendered /Users/john/projects/common-content/app/views/contents/_form.html.erb (3.9ms)
+  Rendered /Users/john/projects/common-content/app/views/contents/define.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 38ms (Views: 27.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-18 07:42:36 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-06-18 07:42:36 -0600
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contents.css?body=1" for 127.0.0.1 at 2012-06-18 07:42:36 -0600
+Served asset /contents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-06-18 07:42:36 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-18 07:42:36 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-18 07:42:36 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/content.js?body=1" for 127.0.0.1 at 2012-06-18 07:42:36 -0600
+Served asset /content.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contents.js?body=1" for 127.0.0.1 at 2012-06-18 07:42:36 -0600
+Served asset /contents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foos.js?body=1" for 127.0.0.1 at 2012-06-18 07:42:36 -0600
+Served asset /foos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-18 07:42:36 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/contents/4fdbf7764841efcb8a00001a/images/favicon.ico" for 127.0.0.1 at 2012-06-18 07:42:36 -0600
+
+ActionController::RoutingError (No route matches [GET] "/contents/4fdbf7764841efcb8a00001a/images/favicon.ico"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/john/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/john/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/john/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/john/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2012-06-18 07:42:38 -0600
+
+ActionController::RoutingError (No route matches [GET] "/images/favicon.ico"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/john/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/john/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/john/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/john/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/contents/4fdb9ffd4841efc9bb000028/define" for 127.0.0.1 at 2012-06-18 07:43:24 -0600
+Processing by ContentsController#define as HTML
+  Parameters: {"id"=>"4fdb9ffd4841efc9bb000028"}
+MONGODB (0ms) dummy_development['content_definitions'].find({})
+MONGODB (0ms) dummy_development['contents'].find({:_id=>BSON::ObjectId('4fdb9ffd4841efc9bb000028')}).limit(-1).sort([[:_id, :asc]])
+MONGODB (0ms) dummy_development['content_definitions'].find({"content_id"=>BSON::ObjectId('4fdb9ffd4841efc9bb000028')}).limit(-1).sort([[:_id, :asc]])
+  Rendered /Users/john/projects/common-content/app/views/contents/_form.html.erb (2.5ms)
+  Rendered /Users/john/projects/common-content/app/views/contents/define.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 20ms (Views: 10.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-18 07:43:24 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-06-18 07:43:24 -0600
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contents.css?body=1" for 127.0.0.1 at 2012-06-18 07:43:24 -0600
+Served asset /contents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-06-18 07:43:24 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/content.js?body=1" for 127.0.0.1 at 2012-06-18 07:43:24 -0600
+Served asset /content.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-18 07:43:24 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-18 07:43:24 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contents.js?body=1" for 127.0.0.1 at 2012-06-18 07:43:24 -0600
+Served asset /contents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foos.js?body=1" for 127.0.0.1 at 2012-06-18 07:43:24 -0600
+Served asset /foos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-18 07:43:24 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/contents/4fdb9ffd4841efc9bb000028/images/favicon.ico" for 127.0.0.1 at 2012-06-18 07:43:24 -0600
+
+ActionController::RoutingError (No route matches [GET] "/contents/4fdb9ffd4841efc9bb000028/images/favicon.ico"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/john/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/john/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/john/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/john/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/contents/4fdb9ffd4841efc9bb000028/define" for 127.0.0.1 at 2012-06-18 07:44:08 -0600
+Processing by ContentsController#define as HTML
+  Parameters: {"id"=>"4fdb9ffd4841efc9bb000028"}
+MONGODB (0ms) dummy_development['content_definitions'].find({})
+MONGODB (0ms) dummy_development['contents'].find({:_id=>BSON::ObjectId('4fdb9ffd4841efc9bb000028')}).limit(-1).sort([[:_id, :asc]])
+  Rendered /Users/john/projects/common-content/app/views/contents/_form.html.erb (44.4ms)
+  Rendered /Users/john/projects/common-content/app/views/contents/define.html.erb within layouts/application (45.8ms)
+Completed 500 Internal Server Error in 57ms
+
+ActionView::Template::Error (undefined method `slug' for #<ActionView::Helpers::FormBuilder:0x007fbac18a8b70>):
+    1:   <div class="control-group">
+    2:     <%= f.label :slug, :class => 'control-label' %>
+    3:     <div class="controls">
+    4:       <%= p f.slug, :class => 'text_field' %>
+    5:     </div>
+    6:   </div>
+    7:   <div class="control-group">
+  /Users/john/projects/common-content/app/views/contents/_form.html.erb:4:in `___sers_john_projects_common_content_app_views_contents__form_html_erb___272734981583464337_70220043763840'
+  actionpack (3.2.6) lib/action_view/template.rb:145:in `block in render'
+  activesupport (3.2.6) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.6) lib/action_view/template.rb:143:in `render'
+  actionpack (3.2.6) lib/action_view/renderer/partial_renderer.rb:265:in `render_partial'
+  actionpack (3.2.6) lib/action_view/renderer/partial_renderer.rb:238:in `block in render'
+  actionpack (3.2.6) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (3.2.6) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.6) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.6) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (3.2.6) lib/action_view/renderer/partial_renderer.rb:237:in `render'
+  actionpack (3.2.6) lib/action_view/renderer/renderer.rb:41:in `render_partial'
+  actionpack (3.2.6) lib/action_view/renderer/renderer.rb:15:in `render'
+  actionpack (3.2.6) lib/action_view/helpers/rendering_helper.rb:24:in `render'
+  /Users/john/projects/common-content/app/views/contents/define.html.erb:7:in `block in ___sers_john_projects_common_content_app_views_contents_define_html_erb___3955715107342808165_70220062131100'
+  actionpack (3.2.6) lib/action_view/helpers/capture_helper.rb:40:in `block in capture'
+  actionpack (3.2.6) lib/action_view/helpers/capture_helper.rb:187:in `with_output_buffer'
+  actionpack (3.2.6) lib/action_view/helpers/capture_helper.rb:40:in `capture'
+  actionpack (3.2.6) lib/action_view/helpers/form_helper.rb:607:in `fields_for'
+  actionpack (3.2.6) lib/action_view/helpers/form_helper.rb:378:in `form_for'
+  /Users/john/projects/common-content/app/views/contents/define.html.erb:6:in `___sers_john_projects_common_content_app_views_contents_define_html_erb___3955715107342808165_70220062131100'
+  actionpack (3.2.6) lib/action_view/template.rb:145:in `block in render'
+  activesupport (3.2.6) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.6) lib/action_view/template.rb:143:in `render'
+  actionpack (3.2.6) lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+  actionpack (3.2.6) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (3.2.6) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.6) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.6) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (3.2.6) lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+  actionpack (3.2.6) lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+  actionpack (3.2.6) lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  actionpack (3.2.6) lib/action_view/renderer/template_renderer.rb:18:in `render'
+  actionpack (3.2.6) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.6) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.6) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.6) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.6) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.6) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.6) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.6) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.6) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /Users/john/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+  activesupport (3.2.6) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.6) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.6) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.6) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:414:in `_run__2434657846704466592__process_action__1723594707143021031__callbacks'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.6) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.6) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.6) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.6) lib/action_controller/metal/params_wrapper.rb:206:in `process_action'
+  actionpack (3.2.6) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.6) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.6) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.6) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.6) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.6) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.6) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.6) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.3) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.3) lib/journey/router.rb:56:in `each'
+  journey (1.0.3) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.6) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  mongoid (2.4.11) lib/rack/mongoid/middleware/identity_map.rb:33:in `block in call'
+  mongoid (2.4.11) lib/mongoid.rb:133:in `unit_of_work'
+  mongoid (2.4.11) lib/rack/mongoid/middleware/identity_map.rb:33:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:405:in `_run__1466111248891896750__call__1230997228277421415__callbacks'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/john/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/john/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/john/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/john/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.7ms)
+  Rendered /Users/john/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/john/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.9ms)
+
+
+Started GET "/contents/4fdb9ffd4841efc9bb000028/define" for 127.0.0.1 at 2012-06-18 07:46:13 -0600
+Processing by ContentsController#define as HTML
+  Parameters: {"id"=>"4fdb9ffd4841efc9bb000028"}
+MONGODB (0ms) dummy_development['content_definitions'].find({})
+MONGODB (0ms) dummy_development['contents'].find({:_id=>BSON::ObjectId('4fdb9ffd4841efc9bb000028')}).limit(-1).sort([[:_id, :asc]])
+MONGODB (0ms) dummy_development['content_definitions'].find({"content_id"=>BSON::ObjectId('4fdb9ffd4841efc9bb000028')}).limit(-1).sort([[:_id, :asc]])
+  Rendered /Users/john/projects/common-content/app/views/contents/_form.html.erb (3.1ms)
+  Rendered /Users/john/projects/common-content/app/views/contents/define.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 20ms (Views: 10.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-18 07:46:13 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-06-18 07:46:13 -0600
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contents.css?body=1" for 127.0.0.1 at 2012-06-18 07:46:13 -0600
+Served asset /contents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-06-18 07:46:13 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-18 07:46:13 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-18 07:46:13 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/content.js?body=1" for 127.0.0.1 at 2012-06-18 07:46:13 -0600
+Served asset /content.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contents.js?body=1" for 127.0.0.1 at 2012-06-18 07:46:13 -0600
+Served asset /contents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foos.js?body=1" for 127.0.0.1 at 2012-06-18 07:46:13 -0600
+Served asset /foos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-18 07:46:13 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/contents/4fdb9ffd4841efc9bb000028/images/favicon.ico" for 127.0.0.1 at 2012-06-18 07:46:13 -0600
+
+ActionController::RoutingError (No route matches [GET] "/contents/4fdb9ffd4841efc9bb000028/images/favicon.ico"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/john/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/john/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/john/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/john/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/contents/4fdb9ffd4841efc9bb000028/define" for 127.0.0.1 at 2012-06-18 07:49:31 -0600
+Processing by ContentsController#define as HTML
+  Parameters: {"id"=>"4fdb9ffd4841efc9bb000028"}
+MONGODB (0ms) dummy_development['content_definitions'].find({})
+MONGODB (0ms) dummy_development['contents'].find({:_id=>BSON::ObjectId('4fdb9ffd4841efc9bb000028')}).limit(-1).sort([[:_id, :asc]])
+  Rendered /Users/john/projects/common-content/app/views/contents/_form.html.erb (31.7ms)
+  Rendered /Users/john/projects/common-content/app/views/contents/define.html.erb within layouts/application (33.2ms)
+Completed 500 Internal Server Error in 44ms
+
+ActionView::Template::Error (undefined method `each_pair' for "bbbb":String):
+    1:   <div class="control-group">
+    2:     <%= f.label :slug, :class => 'control-label' %>
+    3:     <div class="controls">
+    4:       <%= tag :p, f.object.slug, :class => 'text_field' %>
+    5:     </div>
+    6:   </div>
+    7:   <div class="control-group">
+  actionpack (3.2.6) lib/action_view/helpers/tag_helper.rb:138:in `tag_options'
+  actionpack (3.2.6) lib/action_view/helpers/tag_helper.rb:66:in `tag'
+  /Users/john/projects/common-content/app/views/contents/_form.html.erb:4:in `___sers_john_projects_common_content_app_views_contents__form_html_erb___272734981583464337_70220043999500'
+  actionpack (3.2.6) lib/action_view/template.rb:145:in `block in render'
+  activesupport (3.2.6) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.6) lib/action_view/template.rb:143:in `render'
+  actionpack (3.2.6) lib/action_view/renderer/partial_renderer.rb:265:in `render_partial'
+  actionpack (3.2.6) lib/action_view/renderer/partial_renderer.rb:238:in `block in render'
+  actionpack (3.2.6) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (3.2.6) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.6) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.6) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (3.2.6) lib/action_view/renderer/partial_renderer.rb:237:in `render'
+  actionpack (3.2.6) lib/action_view/renderer/renderer.rb:41:in `render_partial'
+  actionpack (3.2.6) lib/action_view/renderer/renderer.rb:15:in `render'
+  actionpack (3.2.6) lib/action_view/helpers/rendering_helper.rb:24:in `render'
+  /Users/john/projects/common-content/app/views/contents/define.html.erb:7:in `block in ___sers_john_projects_common_content_app_views_contents_define_html_erb___3955715107342808165_70220062131100'
+  actionpack (3.2.6) lib/action_view/helpers/capture_helper.rb:40:in `block in capture'
+  actionpack (3.2.6) lib/action_view/helpers/capture_helper.rb:187:in `with_output_buffer'
+  actionpack (3.2.6) lib/action_view/helpers/capture_helper.rb:40:in `capture'
+  actionpack (3.2.6) lib/action_view/helpers/form_helper.rb:607:in `fields_for'
+  actionpack (3.2.6) lib/action_view/helpers/form_helper.rb:378:in `form_for'
+  /Users/john/projects/common-content/app/views/contents/define.html.erb:6:in `___sers_john_projects_common_content_app_views_contents_define_html_erb___3955715107342808165_70220062131100'
+  actionpack (3.2.6) lib/action_view/template.rb:145:in `block in render'
+  activesupport (3.2.6) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.6) lib/action_view/template.rb:143:in `render'
+  actionpack (3.2.6) lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+  actionpack (3.2.6) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (3.2.6) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.6) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.6) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (3.2.6) lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+  actionpack (3.2.6) lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+  actionpack (3.2.6) lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  actionpack (3.2.6) lib/action_view/renderer/template_renderer.rb:18:in `render'
+  actionpack (3.2.6) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.6) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.6) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.6) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.6) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.6) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.6) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.6) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.6) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /Users/john/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+  activesupport (3.2.6) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.6) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.6) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.6) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:414:in `_run__2434657846704466592__process_action__1723594707143021031__callbacks'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.6) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.6) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.6) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.6) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.6) lib/action_controller/metal/params_wrapper.rb:206:in `process_action'
+  actionpack (3.2.6) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.6) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.6) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.6) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.6) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.6) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.6) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.6) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.3) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.3) lib/journey/router.rb:56:in `each'
+  journey (1.0.3) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.6) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  mongoid (2.4.11) lib/rack/mongoid/middleware/identity_map.rb:33:in `block in call'
+  mongoid (2.4.11) lib/mongoid.rb:133:in `unit_of_work'
+  mongoid (2.4.11) lib/rack/mongoid/middleware/identity_map.rb:33:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:405:in `_run__1466111248891896750__call__1230997228277421415__callbacks'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/john/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/john/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/john/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/john/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.7ms)
+  Rendered /Users/john/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/john/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.9ms)
+
+
+Started GET "/contents/4fdb9ffd4841efc9bb000028/define" for 127.0.0.1 at 2012-06-18 07:50:10 -0600
+Processing by ContentsController#define as HTML
+  Parameters: {"id"=>"4fdb9ffd4841efc9bb000028"}
+MONGODB (0ms) dummy_development['content_definitions'].find({})
+MONGODB (0ms) dummy_development['contents'].find({:_id=>BSON::ObjectId('4fdb9ffd4841efc9bb000028')}).limit(-1).sort([[:_id, :asc]])
+MONGODB (0ms) dummy_development['content_definitions'].find({"content_id"=>BSON::ObjectId('4fdb9ffd4841efc9bb000028')}).limit(-1).sort([[:_id, :asc]])
+  Rendered /Users/john/projects/common-content/app/views/contents/_form.html.erb (3.0ms)
+  Rendered /Users/john/projects/common-content/app/views/contents/define.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 20ms (Views: 10.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-18 07:50:10 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-06-18 07:50:10 -0600
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contents.css?body=1" for 127.0.0.1 at 2012-06-18 07:50:10 -0600
+Served asset /contents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-06-18 07:50:10 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-18 07:50:10 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/content.js?body=1" for 127.0.0.1 at 2012-06-18 07:50:10 -0600
+Served asset /content.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-18 07:50:10 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contents.js?body=1" for 127.0.0.1 at 2012-06-18 07:50:10 -0600
+Served asset /contents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foos.js?body=1" for 127.0.0.1 at 2012-06-18 07:50:10 -0600
+Served asset /foos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-18 07:50:10 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/contents/4fdb9ffd4841efc9bb000028/images/favicon.ico" for 127.0.0.1 at 2012-06-18 07:50:10 -0600
+
+ActionController::RoutingError (No route matches [GET] "/contents/4fdb9ffd4841efc9bb000028/images/favicon.ico"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/john/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/john/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/john/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/john/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/contents" for 127.0.0.1 at 2012-06-18 07:50:14 -0600
+Processing by ContentsController#index as HTML
+MONGODB (0ms) dummy_development['content_definitions'].find({})
+MONGODB (0ms) dummy_development['contents'].find({})
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.0. Use ':data => { :confirm => 'Text' }' instead. (called from block in ___sers_john_projects_common_content_app_views_contents_index_html_erb__1693872408675508955_70220069879280 at /Users/john/projects/common-content/app/views/contents/index.html.erb:23)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.0. Use ':data => { :confirm => 'Text' }' instead. (called from block in ___sers_john_projects_common_content_app_views_contents_index_html_erb__1693872408675508955_70220069879280 at /Users/john/projects/common-content/app/views/contents/index.html.erb:23)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.0. Use ':data => { :confirm => 'Text' }' instead. (called from block in ___sers_john_projects_common_content_app_views_contents_index_html_erb__1693872408675508955_70220069879280 at /Users/john/projects/common-content/app/views/contents/index.html.erb:23)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.0. Use ':data => { :confirm => 'Text' }' instead. (called from block in ___sers_john_projects_common_content_app_views_contents_index_html_erb__1693872408675508955_70220069879280 at /Users/john/projects/common-content/app/views/contents/index.html.erb:23)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.0. Use ':data => { :confirm => 'Text' }' instead. (called from block in ___sers_john_projects_common_content_app_views_contents_index_html_erb__1693872408675508955_70220069879280 at /Users/john/projects/common-content/app/views/contents/index.html.erb:23)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.0. Use ':data => { :confirm => 'Text' }' instead. (called from block in ___sers_john_projects_common_content_app_views_contents_index_html_erb__1693872408675508955_70220069879280 at /Users/john/projects/common-content/app/views/contents/index.html.erb:23)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.0. Use ':data => { :confirm => 'Text' }' instead. (called from block in ___sers_john_projects_common_content_app_views_contents_index_html_erb__1693872408675508955_70220069879280 at /Users/john/projects/common-content/app/views/contents/index.html.erb:23)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.0. Use ':data => { :confirm => 'Text' }' instead. (called from block in ___sers_john_projects_common_content_app_views_contents_index_html_erb__1693872408675508955_70220069879280 at /Users/john/projects/common-content/app/views/contents/index.html.erb:23)
+  Rendered /Users/john/projects/common-content/app/views/contents/index.html.erb within layouts/application (44.4ms)
+Completed 200 OK in 59ms (Views: 49.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-18 07:50:14 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contents.css?body=1" for 127.0.0.1 at 2012-06-18 07:50:14 -0600
+Served asset /contents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-06-18 07:50:14 -0600
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-18 07:50:14 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-18 07:50:14 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-06-18 07:50:14 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/content.js?body=1" for 127.0.0.1 at 2012-06-18 07:50:14 -0600
+Served asset /content.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contents.js?body=1" for 127.0.0.1 at 2012-06-18 07:50:14 -0600
+Served asset /contents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foos.js?body=1" for 127.0.0.1 at 2012-06-18 07:50:14 -0600
+Served asset /foos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-18 07:50:14 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2012-06-18 07:50:14 -0600
+
+ActionController::RoutingError (No route matches [GET] "/images/favicon.ico"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/john/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/john/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/john/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/john/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/contents/4fdba4c84841efca2f000005/define" for 127.0.0.1 at 2012-06-18 07:50:17 -0600
+Processing by ContentsController#define as HTML
+  Parameters: {"id"=>"4fdba4c84841efca2f000005"}
+MONGODB (0ms) dummy_development['content_definitions'].find({})
+MONGODB (0ms) dummy_development['contents'].find({:_id=>BSON::ObjectId('4fdba4c84841efca2f000005')}).limit(-1).sort([[:_id, :asc]])
+MONGODB (0ms) dummy_development['content_definitions'].find({"content_id"=>BSON::ObjectId('4fdba4c84841efca2f000005')}).limit(-1).sort([[:_id, :asc]])
+  Rendered /Users/john/projects/common-content/app/views/contents/_form.html.erb (2.5ms)
+  Rendered /Users/john/projects/common-content/app/views/contents/define.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 20ms (Views: 9.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-18 07:50:17 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-06-18 07:50:17 -0600
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-06-18 07:50:17 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-18 07:50:17 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-18 07:50:17 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contents.css?body=1" for 127.0.0.1 at 2012-06-18 07:50:17 -0600
+Served asset /contents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/content.js?body=1" for 127.0.0.1 at 2012-06-18 07:50:17 -0600
+Served asset /content.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contents.js?body=1" for 127.0.0.1 at 2012-06-18 07:50:17 -0600
+Served asset /contents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foos.js?body=1" for 127.0.0.1 at 2012-06-18 07:50:17 -0600
+Served asset /foos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-18 07:50:17 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/contents/4fdba4c84841efca2f000005/images/favicon.ico" for 127.0.0.1 at 2012-06-18 07:50:17 -0600
+
+ActionController::RoutingError (No route matches [GET] "/contents/4fdba4c84841efca2f000005/images/favicon.ico"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/john/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/john/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/john/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/john/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2012-06-18 07:50:19 -0600
+
+ActionController::RoutingError (No route matches [GET] "/images/favicon.ico"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/john/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/john/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/john/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/john/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)

@@ -29,15 +29,15 @@ describe Content do
       @b.fields.keys.should_not include('a')
     end
     it 'allows building multiple different instances, getting all' do
-      Content.all.entries.should include @a and include @b
+      Content.all_entries.entries.should include @a and include @b
     end
     context '#save' do
       it 'allows different instance-types to be saved to mongo' do
         one = Content.build('one', 'field :one, type: String')
         two = Content.build('two', 'field :two, type: String')
-        one.save; two.save
-        uno = Content.find('one')
-        dos = Content.find('two')
+        one.save!; two.save!
+        uno = Content.find(one.id)
+        dos = Content.find(two.id)
         uno.class.name.should == 'Content::One'
         dos.class.name.should == 'Content::Two'
       end
@@ -46,7 +46,7 @@ describe Content do
       it 'can lookup an instance by slug' do
         one = Content.build('one', 'field :one, type: String')
         one.save
-        Content.find('one').should be
+        Content.find(one.id).should be
       end
     end
   end

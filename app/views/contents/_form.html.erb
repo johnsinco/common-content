@@ -1,7 +1,7 @@
   <div class="control-group">
     <%= f.label :slug, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :slug, :class => 'text_field' %>
+      <%= content_tag :p, f.object.slug, :class => 'text_field' %>
     </div>
   </div>
   <div class="control-group">

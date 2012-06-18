@@ -3,10 +3,10 @@ class Content
   include Mongoid::Timestamps
 
   field :slug, type: String
-  attr_protected :slug
+  # attr_protected :slug
   has_one :definition, :class_name => 'Content::Definition', autosave: true
   accepts_nested_attributes_for :definition
-  attr_protected :definition
+  # attr_protected :definition
 
   validates :slug, :definition,  presence: true 
 
