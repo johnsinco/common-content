@@ -14,7 +14,7 @@
     <% @contents.each do |content| %>
       <tr>
         <td><%= link_to content.slug, content_path(content) %></td>
-        <td><%= content.fields.keys.reject {|k| /_/ =~ k }.join(' ') %></td>
+        <td><%= content.data_fields.keys.join(' ') %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                 edit_content_path(content), :class => 'btn btn-mini' %>

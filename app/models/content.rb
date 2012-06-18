@@ -3,8 +3,10 @@ class Content
   include Mongoid::Timestamps
 
   field :slug, type: String
+  attr_protected :slug
   has_one :definition, :class_name => 'Content::Definition', autosave: true
   accepts_nested_attributes_for :definition
+  attr_protected :definition
 
   validates :slug, :definition,  presence: true 
 
@@ -40,6 +42,10 @@ class Content
   def self.define_class(classname, defn)
     # create the dynamic class from the definition
     binding.eval("class #{classname} < Content; #{defn}; end")
+  end
+
+  def data_fields
+    fields.reject { |k,v| /^_.*|slug|definition|created_at|updated_at/ =~ k  }
   end
 
   class Definition

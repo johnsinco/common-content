@@ -26,6 +26,7 @@ class ContentsController < ApplicationController
   def show    # Content.all_entries
     Content.all_entries
     @content = Content.find(params[:id])
+    respond_with @content
   end
 
 
@@ -59,7 +60,7 @@ class ContentsController < ApplicationController
     @content = Content.find(params[:id])
     @content.renovate(params[:content][:defn])
     if @content.save
-      respond_with @content
+      redirect_to contents_path, notice: "#{@content.slug} definition updated."
     else
       respond_to do |format|
         format.html { render action: "define" }
