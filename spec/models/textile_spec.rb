@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'RedCloth'
 
 describe Textile do
   subject { RedCloth.new('h1. Red Foo, a TRUE party rocka!')}
