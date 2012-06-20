@@ -33,16 +33,31 @@ The expectation is that your site will most likely use the JSON output of the co
 |:dictionary faq       |...a sortable list of definition pairs...   | 'faq':{'one':'1', 'two','2'...}|
 |:include 'some-slug'  |... include another contents edit view...   |'some-slug':{.......})|
 
+h3. DSL Content Types
+
+Currently two custom Mongoid content types are supported: Textile and Image, both of which are just renamed strings.  Soon I'll be adding a Link type for composing content based on other content, and DSL fronted String, Date, and maybe Video.  The FAQ types may consist of simply a bag that contains definition entries, or entries may be 'tagged' by a FAQ category.
+
+h3. Pages
+
+TODO - Pages are a way to add some site-structure to the small and flat Content items.  Pages link to Content items that they are composed of, as well as to child pages to form a mini-site structure.  Pages are meant to allow an entire CC-backed mini-site to be constructed without any custom code if desired.  Pages will have SEO metadata.
+
+h3. ETags and Caching
+
+The JSON interface to the Content and Page items will use the standard Rails JSON facility, and will return ETags based on the hash of the returned JSON.  This should allow caching of the results and cache-invalidation based on the ETag.
+
 
 h3. TODO
 
 A lot...     
 
 Figure out how to link to other content via a HATEOS type url and be able to pick items and
-order them.   How to edit sub-content, just link to it's show page?  Add bootstrap as the styling
-for the UI.  Restrict definition and creation to the editor role or login. Add more meta-types like
+order them.   How to edit sub-content, just link to it's show page? Restrict definition and creation to the editor role or login. Add more meta-types like
 FAQ, definition, etc.
 
-== See Also
+h4. See Also
 
 link:https://github.com/deathbob/Contentment
+link:https://github.com/parndt/seo_meta
+link:https://github.com/resolve/refinerycms
+link:https://github.com/jcasimir/draper
+link:http://blog.steveklabnik.com/posts/2012-01-06-implementing-hateoas-with-presenters

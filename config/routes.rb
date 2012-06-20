@@ -6,4 +6,6 @@ Rails.application.routes.draw do
     get 'define'
   end
  end
+ resources :pages
+ 
 end
