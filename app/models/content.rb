@@ -18,6 +18,14 @@ class Content
     definition.definition
   end
 
+  Mongoid::Fields.option :source do |model, field, option|
+    field.options[:source] = option
+  end
+
+  def source(field)
+    fields[field.to_s].options[:source]
+  end
+
   def self.all_entries
     Content::Definition.all.each {|defn| define_class(defn.content_type, defn.definition) }
     Content.all

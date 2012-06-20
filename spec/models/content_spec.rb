@@ -1,6 +1,13 @@
 require 'spec_helper'
 
 describe Content do
+  context '#source' do
+    it 'provides a macro that defines the avail sources for a field' do
+      blok = 'field :link, type: Link, source: "/contents.xml"'
+      c = Content.build('lnk', blok)
+      c.source(:link).should == '/contents.xml'
+    end
+  end
   it 'requires a :slug and :definition to create' do
     Content.new(slug:'foo', defn:'# none').should be_valid
     Content.new.should_not be_valid

@@ -60667,3 +60667,5 @@ ActionController::RoutingError (No route matches [GET] "/images/favicon.ico"):
 
 
   Rendered /Users/john/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
