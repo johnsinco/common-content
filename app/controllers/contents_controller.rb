@@ -1,6 +1,6 @@
 class ContentsController < ApplicationController
 
-  respond_to :html, :json
+  respond_to :html, :json, :xml
 
   def index
     @contents = Content.all_entries

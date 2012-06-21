@@ -18,10 +18,6 @@ class Content
     definition.definition
   end
 
-  Mongoid::Fields.option :source do |model, field, option|
-    field.options[:source] = option
-  end
-
   def source(field)
     fields[field.to_s].options[:source]
   end

@@ -9,7 +9,5 @@ class Textile < RedCloth::TextileDoc
     object = '' unless object 
     RedCloth.new(object)
   end 
-  # def initialize(string = '')
-  #   super
-  # end
+ 
 end
