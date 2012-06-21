@@ -1,0 +1,14 @@
+<% f.object.send(fk).each_with_index do |ar, idx|  %>
+  <div class="control-group">
+    <%= f.fields_for fk do |ar_form| %>
+    <div class="controls">
+      <!-- do some stuff to see if this type has a specific view partial -->
+      <% if File.file?(File.expand_path("_#{ar.type.to_s.downcase}_form.html.erb", File.dirname(__FILE__))) %>
+        <%= render :partial => "#{ar.type.to_s.downcase}_form", :locals => {f: f, fk: fk} %>
+      <% else %>
+        <%= ar_form.text_field  "",  :class => 'text_field', :value => ar %>
+      <% end %>
+    </div>
+    <% end %>
+  </div>
+<% end %>
