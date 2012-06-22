@@ -18,7 +18,8 @@ end
 gem 'twitter-bootstrap-rails', :git => "https://github.com/seyhunak/twitter-bootstrap-rails.git"
 group :assets do
   gem 'less'
-  gem 'therubyrhino'
+  gem 'therubyrhino', :platform => :jruby
+  gem 'therubyracer', :platform => :ruby
 end
 
 # To use debugger

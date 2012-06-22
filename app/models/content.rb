@@ -49,7 +49,9 @@ class Content
   end
 
   def data_fields
-    fields.reject { |k,v| /^_.*|slug|definition|created_at|updated_at/ =~ k  }
+    df = fields.inject({}) {|h, (k,v)| h[k] = v.type; h}
+    df.merge relations.inject({}) {|h, (k,v)| h[k] = v.class_name; h}
+    df
   end
 
   class Definition

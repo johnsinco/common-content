@@ -9,6 +9,7 @@
     <%= f.label fk.intern, :class => 'control-label' %>
     <div class="controls">
       <!-- do some stuff to see if this type has a specific view partial -->
+<h6><%= fk %> is a <%= val.type.to_s %></h6>
       <% if File.file?(File.expand_path("_#{val.type.to_s.downcase}_form.html.erb", File.dirname(__FILE__))) %>
         <%= render :partial => "#{val.type.to_s.downcase}_form", :locals => {f: f, fk: fk} %>
       <% else %>
