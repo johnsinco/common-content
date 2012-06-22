@@ -6,12 +6,14 @@
 <%= form_for @content, :as => :content, :url => content_path(@content.id), :html => { :class => 'form-horizontal' } do |f| %>
   <% @content.data_fields.each do |fk, val| %>
   <div class="control-group">
-    <%= f.label fk.intern, :class => 'control-label' %>
+    <%= f.label fk.intern, :class => 'control-label' %> - <%= fk %> -- <%= val %>
     <div class="controls">
       <!-- do some stuff to see if this type has a specific view partial -->
-<h6><%= fk %> is a <%= val.type.to_s %></h6>
-      <% if File.file?(File.expand_path("_#{val.type.to_s.downcase}_form.html.erb", File.dirname(__FILE__))) %>
-        <%= render :partial => "#{val.type.to_s.downcase}_form", :locals => {f: f, fk: fk} %>
+      <% if File.file?(File.expand_path("_#{val.to_s.downcase}_form.html.erb", File.dirname(__FILE__))) %>
+        <% f.fields_for fk do |ff| %>
+<h3>in f.fields_for with <%= ff.object %></h3>
+          <%= render :partial => "#{val.to_s.downcase}_form", :locals => {f: ff, fk: fk} %>
+        <% end %>
       <% else %>
         <%= f.text_field fk.intern, :class => 'text_field' %>
       <% end %>

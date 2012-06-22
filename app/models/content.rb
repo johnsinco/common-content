@@ -50,8 +50,8 @@ class Content
 
   def data_fields
     df = fields.inject({}) {|h, (k,v)| h[k] = v.type; h}
-    df.merge relations.inject({}) {|h, (k,v)| h[k] = v.class_name; h}
-    df
+    rl = relations.inject({}) {|h, (k,v)| h[k] = self.send(k).class; h}
+    df.merge(rl).reject {|k,v| /^_.*|created_at|updated_at|slug|definition/ =~ k}
   end
 
   class Definition
