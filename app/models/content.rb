@@ -3,61 +3,21 @@ class Content
   include Mongoid::Timestamps
 
   field :slug, type: String
-  # attr_protected :slug
-  has_one :definition, :class_name => 'Content::Definition', autosave: true
-  accepts_nested_attributes_for :definition
-  # attr_protected :definition
+  validates :slug, presence: true, uniqueness: true
+  key :slug
 
-  validates :slug, :definition,  presence: true 
+ recursively_embeds_many
 
-  def defn=(defn)
-    build_definition(definition: defn)
-  end
+ def method_missing(symbol)
+  child(symbol) or super
+ end
 
-  def defn
-    definition.definition
-  end
+ def respond_to?(symbol, include_private = false)
+  child(symbol) or super
+ end
 
-  def source(field)
-    fields[field.to_s].options[:source]
-  end
+ def child(slug)
+  child_contents.detect{|c| c.slug == slug}
+ end
 
-  def self.all_entries
-    Content::Definition.all.each {|defn| define_class(defn.content_type, defn.definition) }
-    Content.all
-  end
-
-  def self.build(slug, defn)
-    # create an object from the name
-    classname = classify(slug)
-    define_class(classname, defn)
-    const_get(classname).new(slug: slug, defn: defn)
-  end
-
-  def renovate(defn)
-    self.definition.definition = defn
-    Content.define_class(self.class.name, defn)
-  end
-
-  def self.classify(slug)
-    slug.gsub(/-/, '_').classify
-  end
-
-  def self.define_class(classname, defn)
-    # create the dynamic class from the definition
-    binding.eval("class #{classname} < Content; #{defn}; end")
-  end
-
-  def data_fields
-    df = fields.inject({}) {|h, (k,v)| h[k] = v.type; h}
-    rl = relations.inject({}) {|h, (k,v)| h[k] = self.send(k).class; h}
-    df.merge(rl).reject {|k,v| /^_.*|created_at|updated_at|slug|definition/ =~ k}
-  end
-
-  class Definition
-    include Mongoid::Document
-    belongs_to :content, polymorphic: true
-    field :slug
-    field :definition, type: String
-  end
 end
