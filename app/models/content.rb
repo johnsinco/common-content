@@ -6,17 +6,21 @@ class Content
   validates :slug, presence: true, uniqueness: true
   key :slug
 
- recursively_embeds_many
+  field :required, type: Boolean, default: true # cannot be removed by user
+  field :editable, type: Boolean, default: false # structure cannot be changed by user
+  field :tags, type: Array, default: []  # array of strings
 
- def method_missing(symbol)
+  recursively_embeds_many
+
+  def method_missing(symbol)
   child(symbol) or super
- end
+  end
 
- def respond_to?(symbol, include_private = false)
+  def respond_to?(symbol, include_private = false)
   child(symbol) or super
- end
+  end
 
- def child(slug)
+  def child(slug)
   child_contents.detect{|c| c.slug == slug}
  end
 

@@ -5,6 +5,8 @@ class Entry < Content
   field :title, type: Textile
   field :body, type: Textile
 
+  field :media, type: String # url of a media item like image, video, etc
+
   validates :body, presence: true
 
   validate :childless

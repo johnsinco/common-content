@@ -1,0 +1,29 @@
+{
+  "slug":"about-us",
+  "title":"About Us",
+  "editable":"false",
+  "required":"true",
+  "contents":"h1. About Us ....  lorem ipsum....",
+  "child_contents": [
+      {
+        "slug":"executive-bios",
+        "title":"Executive Profiles",
+        "editable":"true",
+        "required":"true",
+        "child_contents": [
+            {"_type":"Link", "uri":"/personalities/glavin"},
+            {"_type":"Link", "uri":"/personalities/steinmetz"},
+            {"_type":"Link", "uri":"/personalities/closs"}
+          ]
+      },
+      {
+        "slug":"philanthropy",
+        "title":"Philanthropy",
+        "editable":"false",
+        "required":"false",
+        "contents":"h1. Our Charitable Efforts ....  lorem ....", 
+        "media":{"uri":"http://brightcove.com/video/1","type":"video"},
+        "child_contents":[]
+      }
+    ] 
+}

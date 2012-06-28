@@ -3,7 +3,6 @@ class ContentsController < ApplicationController
   respond_to :html, :json, :xml
 
   def index
-    @contents = Content.all_entries
     respond_with @contents
   end
 
@@ -14,17 +13,14 @@ class ContentsController < ApplicationController
   end
 
   def edit
-    Content.all_entries
     @content = Content.find(params[:id])
   end
 
   def define 
-    Content.all_entries
     @content = Content.find(params[:id])
   end
 
   def show    # Content.all_entries
-    Content.all_entries
     @content = Content.find(params[:id])
     respond_with @content
   end
@@ -42,7 +38,6 @@ class ContentsController < ApplicationController
   end
 
   def update
-    Content.all_entries
     @content = Content.find(params[:id])
     if @content.update_attributes(params[:content])
       redirect_to contents_path, notice: "#{@content.slug} created."
@@ -57,7 +52,6 @@ class ContentsController < ApplicationController
   # PUT /foos/1
   # PUT /foos/1.json
   def renovate
-    Content.all_entries
     @content = Content.find(params[:id])
     @content.renovate(params[:content][:defn])
     if @content.save

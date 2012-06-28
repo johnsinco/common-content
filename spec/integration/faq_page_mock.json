@@ -1,0 +1,48 @@
+{
+  "slug":"faq",
+  "title":"FAQs",
+  "editable":"true",
+  "required":"true",
+  "child_contents": [
+      {
+        "slug":"featured",
+        "title":"Featured",
+        "editable":"false",
+        "required":"true"
+      },
+      {
+        "slug":"college",
+        "title":"College Plans",
+        "editable":"true",
+        "required":"false",
+        "child_contents": [
+            {
+              "slug":"can-i-compare",
+              "title":"Can I Compare OppenheimerFunds...",
+              "content":"h4. Praesent nizzle turpizzle shut the shizzle up its fo rizzle shut the shizzle up molestie. Vivamus vestibulum tortizzle vel sheezy. Quisque malesuada boom shackalack magna. Morbi fo shizzle my nizzle, nisl nizzle bibendizzle egestizzle,
+                          magna for sure owned ligula, izzle shizznit justo i'm in the shizzle quizzle shiz. "
+            },
+            {
+              "slug":"where-to-get-forms",
+              "title":"Where can I find common forms",
+              "tags":["featured", "taxes", "forms"],
+              "content":"h4. Praesent nizzle turpizzle shut the shizzle up its fo rizzle shut the shizzle up molestie. Vivamus vestibulum tortizzle vel sheezy. Quisque malesuada boom shackalack magna. Morbi fo shizzle my nizzle, nisl nizzle bibendizzle egestizzle,
+                          magna for sure owned ligula, izzle shizznit justo i'm in the shizzle quizzle shiz. "
+            }        ]
+      },
+      {
+        "slug":"retirement",
+        "title":"Retirement",
+        "editable":"true",
+        "required":"false",
+        "child_contents": [
+            {
+              "slug":"how-tax-affects-account",
+              "title":"How Do OppenheimerFunds avoid taxes?",
+              "content":"h4. Praesent nizzle turpizzle shut the shizzle up its fo rizzle shut the shizzle up molestie. Vivamus vestibulum tortizzle vel sheezy. Quisque malesuada boom shackalack magna. Morbi fo shizzle my nizzle, nisl nizzle bibendizzle egestizzle,
+                          magna for sure owned ligula, izzle shizznit justo i'm in the shizzle quizzle shiz. "
+            }
+        ]
+      }
+   ] 
+}

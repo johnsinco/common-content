@@ -64,30 +64,6 @@ describe Content do
       subject.child_contents.second.should be_a Entry
       subject.child_contents.second.body.should == 'h1. foo'
     end
-  end
-
-  context 'About Us Page' do
-    before(:all) do
-      @about = Content.new(slug:'about-us')
-      hero = @about.child_contents << Content::Entry.new(slug:'hero', body:'foo')
-      bios = @about.child_contents << Content::Group.new(slug:'bios')
-      phil = @about.child_contents << Content::Group.new(slug:'phil')
-      @about.save!
-    end
-    it 'can make a content item with the necessary components' do
-      @about.save!
-      @about.child_contents.count.should == 3
-    end
-    it 'child contents can be accessed by slug' do
-      pending
-      @about.should respond_to(:hero)
-    end
-    it 'content children should have the right type' do
-      pending 
-      @about.hero.should be_a Content::Entry
-      @about.bios.should be_a Content::Group
-      @about.phil.should be_a Content::Group
-    end
     it 'page groups can be added' do
       @about.child_contents << Group.new(slug:'third')
       @about.save!
@@ -95,9 +71,12 @@ describe Content do
       @about.child_contents.last.slug.should == 'third'
     end
     it 'page groups can be removed' do
-    end
-    it 'page groups can be re-ordered' do
+      @about.child_contents << Group.new(slug:'fourth')
+      @about.save!; @about.reload
+      @about.child_contents.last.slug.should == 'fourth'
+      @about.child_contents.remove
     end
   end
+
 end
 end
