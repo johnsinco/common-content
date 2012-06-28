@@ -1,1 +1,4 @@
 show dbs
+show dbs
+use edist
+show collections
