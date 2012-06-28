@@ -14,12 +14,12 @@ describe Textile do
   # end
   context '# mongoid serialize' do
     it 'can be read/written from mongoid as a string' do
-      c = Content.build('redfoo', 'field :textile, type:Textile')
-      c.textile = 'h1. Red Foo, a TRUE party rocka!'
+      c = Entry.new(slug:'txt')
+      c.body = 'h1. Red Foo, a TRUE party rocka!'
       c.save
       d = Content.find(c.id)
-      d.textile.should == 'h1. Red Foo, a TRUE party rocka!' 
-      d.textile.to_html.should == "<h1>Red Foo, a <span class=\"caps\">TRUE</span> party rocka!</h1>"
+      d.body.should == 'h1. Red Foo, a TRUE party rocka!' 
+      d.body.to_html.should == "<h1>Red Foo, a <span class=\"caps\">TRUE</span> party rocka!</h1>"
     end
   end
 end

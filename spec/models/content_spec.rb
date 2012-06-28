@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Content do
-
+  subject { Content.new(slug:'subject')}
   context "basic fields" do
     it 'accepts a slug' do
       subject.should respond_to(:slug)
@@ -40,7 +40,6 @@ describe Content do
       Content::Media.should be
     end
     it 'has a Entry type' do
-      pending
       Content::Entry.should be
     end
     it 'has a Entity type' do
@@ -49,26 +48,55 @@ describe Content do
     end
   end
 
+  context 'composition' do
+    it 'can add child content items' do
+      subject.child_contents << Content.new(slug:'kidA', body:'h1. foo')
+      subject.save!; subject.reload
+      subject.child_contents.count.should == 1
+    end
+    it 'children can be of subtypes' do
+      subject.child_contents << Group.new(slug:'kidB')
+      entry = Entry.new(slug:'kidA', body:'h1. foo')
+      entry.should be_valid
+      subject.child_contents << entry
+      subject.save!; subject.reload
+      subject.child_contents.first.should be_a Group
+      subject.child_contents.second.should be_a Entry
+      subject.child_contents.second.body.should == 'h1. foo'
+    end
+  end
+
   context 'About Us Page' do
     before(:all) do
-      subject.slug = 'about-us'
-      hero = subject.child_contents << Content::Entry.new(slug:'hero', body:'foo')
-      bios = subject.child_contents << Content::Group.new(slug:'bios')
-      phil = subject.child_contents << Content::Group.new(slug:'phil')
+      @about = Content.new(slug:'about-us')
+      hero = @about.child_contents << Content::Entry.new(slug:'hero', body:'foo')
+      bios = @about.child_contents << Content::Group.new(slug:'bios')
+      phil = @about.child_contents << Content::Group.new(slug:'phil')
+      @about.save!
     end
     it 'can make a content item with the necessary components' do
-      subject.save!
-      subject.child_contents.count.should == 3
+      @about.save!
+      @about.child_contents.count.should == 3
     end
     it 'child contents can be accessed by slug' do
       pending
-      subject.should respond_to(:hero)
+      @about.should respond_to(:hero)
     end
     it 'content children should have the right type' do
       pending 
-      subject.hero.should be_a Content::Entry
-      subject.bios.should be_a Content::Group
-      subject.phil.should be_a Content::Group
+      @about.hero.should be_a Content::Entry
+      @about.bios.should be_a Content::Group
+      @about.phil.should be_a Content::Group
+    end
+    it 'page groups can be added' do
+      @about.child_contents << Group.new(slug:'third')
+      @about.save!
+      @about.reload
+      @about.child_contents.last.slug.should == 'third'
+    end
+    it 'page groups can be removed' do
+    end
+    it 'page groups can be re-ordered' do
     end
   end
 end

@@ -18,7 +18,7 @@ describe Entry do
   it 'does not allow children' do
     subject = Entry.new(slug:'foo', body:'foo')
     subject.child_contents.build(slug:'blargh')
-    subject.should be_invalid
+    expect { subject.save! }.to raise_error
     subject.child_contents = nil
     subject.should be_valid
   end

@@ -5,6 +5,4 @@ class Group < Content
   field :title, type: Textile
   field :body, type: Textile
 
-  validates :body, presence: true
-
 end

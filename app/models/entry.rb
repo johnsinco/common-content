@@ -7,6 +7,9 @@ class Entry < Content
 
   validates :body, presence: true
 
-  validates :child_contents, length: {:maximum => 0}
+  validate :childless
 
+  def childless
+    errors.add(:child_contents, 'Entry cannot contain children') unless child_contents.blank?
+  end
 end
