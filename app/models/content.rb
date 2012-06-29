@@ -7,21 +7,11 @@ class Content
   key :slug
 
   field :required, type: Boolean, default: true # cannot be removed by user
-  field :editable, type: Boolean, default: false # structure cannot be changed by user
+  field :editable, type: Boolean, default: false #  children are fixed, cannot be user modified
   field :tags, type: Array, default: []  # array of strings
 
+  embeds_one :seo, class_name: 'Seo'  # optional SEO fields
+  embeds_one :media, class_name: 'Media'  # optional media element, might move this into children?
   recursively_embeds_many
-
-  def method_missing(symbol)
-  child(symbol) or super
-  end
-
-  def respond_to?(symbol, include_private = false)
-  child(symbol) or super
-  end
-
-  def child(slug)
-  child_contents.detect{|c| c.slug == slug}
- end
 
 end

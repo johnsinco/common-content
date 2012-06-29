@@ -5,6 +5,7 @@
   "required":"true",
   "contents":"h1. Let's Talk. We'd love to hear from you. For your convenience ....",
   "media":{"uri":"http://brightcove.com/video/1","type":"video"},
+  "seo":{"keywords":["contact","phone","address"]},
   "child_contents": [
       {
         "slug":"call-us",
