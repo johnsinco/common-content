@@ -8,7 +8,7 @@ describe ContentsController do
     end
   end
   context '#edit' do
-    before { Content.build('foo', 'field :one, type: String').save }
+    before { Content.create!(slug:'foo',title:'foo') }
     it 'returns the content instance' do
       c = Content.first
       get :edit, id: c.id

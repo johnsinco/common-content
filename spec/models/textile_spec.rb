@@ -14,7 +14,7 @@ describe Textile do
   # end
   context '# mongoid serialize' do
     it 'can be read/written from mongoid as a string' do
-      c = Entry.new(slug:'txt')
+      c = Content.new(slug:'txt', title:'txt')
       c.body = 'h1. Red Foo, a TRUE party rocka!'
       c.save
       d = Content.find(c.id)

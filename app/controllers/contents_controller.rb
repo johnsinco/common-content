@@ -3,6 +3,7 @@ class ContentsController < ApplicationController
   respond_to :html, :json, :xml
 
   def index
+    @contents = Content.all
     respond_with @contents
   end
 
