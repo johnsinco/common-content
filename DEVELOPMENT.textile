@@ -1,0 +1,22 @@
+h3. Developing for Common Content
+
+To get started developing for (CC) you will need at least a command-line git client.  
+You can download a command-line git client for Windows here -> http://git-scm.com/downloads
+
+On OSX you should install git using homebrew or your package manager of choice.
+
+Once you have git you can clone the (CC) codebase using the following command...
+    
+    > git clone https://github.com/johnsinco/common-content.git
+
+Then cd to the created common-content directory and perform a `bundle` install
+
+h3.  Specs
+
+(CC) uses rspec-rails as the testing framework.  You can execute the specs using simply `rspec`
+
+h3. Dummy Project
+
+Rails engine plugins use a built-in 'dummy' app for integration testing in the local environment. 
+In order to run the dummy app you should `cd spec/dummy` then `rails s` to run.  The (CC) app is 
+below the '/contents' path in the dummy app ala 'http://localhost:3000/contents' 

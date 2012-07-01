@@ -18,28 +18,20 @@ gem 'common-content'
 
 h3. Using
 
-The DSL for CC is meant to give you a simple way to create a few types of content elements.  The editor defines each 'instance' of content and the elements that it contains using the DSL.  The client can then create/maintain the content blocks and are restricted to the elements the site admin defines.
+(CC) is a rails engine and must be installed as a gem within a rails 3.x host app.  It then makes
+available the /contents path for creating,editing, and viewing Content items.  
 
-Every content instance is named by a :slug that must be unique
+h4. Views
 
-The expectation is that your site will most likely use the JSON output of the content blocks and include them using jQuery or similar.  Each content instance is available via an html `show` page as well.
+(CC) has a complete set of views under the /app/views space within the gem.  As a rails engine
+the host app can replace and customize those views by overriding and adding .erb files under a
+/contents folder in the host app.  
 
-|_.DSL                         |_.EDITOR                                   |_.JSON|
-|:text title max:50     |<input type='text' name='title'>            | 'title': 'something...'|
-|:textile body max:2000  |<input type='textarea' name='body' class='textile-editor'>   |'body': '<div>...</div>'|
-|:list images min:1 max:4  |... some sortable url picker ...        |'images':['/images/foo.png', 'images/bar.png']|
-|:list faq_entries min:1 source:'/faq.json'  |.. some picker ..     |'faq_entries':['']|
-|:date birthday          |<input type'text' class='datepicker'>     | 'birthday':'2000-01-01 12:34:56'|
-|:dictionary faq       |...a sortable list of definition pairs...   | 'faq':{'one':'1', 'two','2'...}|
-|:include 'some-slug'  |... include another contents edit view...   |'some-slug':{.......})|
+The gem uses a convention-based method of finding the views for a particular piece of content. 
+So if the host app wants to provide a custom view for a particular content-item or in the case 
+of edit-views for a certain Resource *type* you can provide the correct named view partials
+under the /views/contents folder of your app.
 
-h3. DSL Content Types
-
-Currently two custom Mongoid content types are supported: Textile and Image, both of which are just renamed strings.  Soon I'll be adding a Link type for composing content based on other content, and DSL fronted String, Date, and maybe Video.  The FAQ types may consist of simply a bag that contains definition entries, or entries may be 'tagged' by a FAQ category.
-
-h3. Pages
-
-TODO - Pages are a way to add some site-structure to the small and flat Content items.  Pages link to Content items that they are composed of, as well as to child pages to form a mini-site structure.  Pages are meant to allow an entire CC-backed mini-site to be constructed without any custom code if desired.  Pages will have SEO metadata.
 
 h3. ETags and Caching
 

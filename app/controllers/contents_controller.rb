@@ -2,6 +2,8 @@ class ContentsController < ApplicationController
 
   respond_to :html, :json, :xml
 
+  before_filter :customize_view_paths
+
   def index
     @contents = Content.all
     respond_with @contents
@@ -9,12 +11,14 @@ class ContentsController < ApplicationController
 
   def new
     @content = Content.new
-    @content.build_definition(definition:'')
-    @content
   end
 
   def edit
     @content = Content.find(params[:id])
+    @content.build_seo unless @content.seo
+    @content.resources.build unless @content.resources.size > 5
+    @content.child_contents.create(slug:'kidA', title:'KidA') if @content.child_contents.size == 0
+    respond_with @content
   end
 
   def define 
@@ -28,7 +32,7 @@ class ContentsController < ApplicationController
 
 
   def create
-    @content = Content.build(params[:content][:slug], params[:content][:defn])
+    @content = Content.new(params[:content])
     if @content.save
       # respond_with @content
       redirect_to contents_path, notice: "#{@content.slug} created."
@@ -40,15 +44,24 @@ class ContentsController < ApplicationController
 
   def update
     @content = Content.find(params[:id])
+    # @content.seo_attributes = params[:content]['seo_attributes']
     if @content.update_attributes(params[:content])
-      redirect_to contents_path, notice: "#{@content.slug} created."
+      redirect_to contents_path, notice: "#{@content.title} updated."
     else
       respond_to do |format|
         format.html { render action: "edit" }
-        format.json { render json: @foo.errors, status: :unprocessable_entity }
+        format.json { render json: @content.errors, status: :unprocessable_entity }
       end
     end
   end
+
+
+  # TODO add code here to build-up embedded objects in the edited object via ajax
+  def modify
+    @content = Content.find(params[:id])
+
+  end
+
 
   # PUT /foos/1
   # PUT /foos/1.json
@@ -60,9 +73,25 @@ class ContentsController < ApplicationController
     else
       respond_to do |format|
         format.html { render action: "define" }
-        format.json { render json: @foo.errors, status: :unprocessable_entity }
+        format.json { render json: @content.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def destroy
+    @content = Content.find(params[:id])
+    @content.destroy
+
+    respond_to do |format|
+      format.html { redirect_to contents_url}
+      format.json { head :no_content }
+    end
+
+  end
+
+  def customize_view_paths 
+    c = Content.find(params[:id]) if params[:id]
+    prepend_view_path "app/views/contents/#{c.slug}" if c
   end
 
 end

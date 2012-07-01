@@ -14,6 +14,16 @@ describe ContentsController do
       get :edit, id: c.id
       assigns(:content).should == c
     end
+    it 'can update the fields in content' do
+      get :edit, id: Content.first.id
+      c = assigns(:content)
+      c.title.should == 'foo'
+      c.title = 'updated'
+      put :update, id: c.id, content: c
+      Content.find(c.id).title.should == 'updated'
+    end
+    it 'can update the fields in the embedded SEO document' do
+    end
   end
   context '#create' do
   end

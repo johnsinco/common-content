@@ -32,8 +32,8 @@
           <div class="container-fluid nav-collapse">
             <ul class="nav">
               <li><%= link_to "Contents", "/contents"  %></li>
-              <li><%= link_to "Pages", "/pages"  %></li>
               <li><%= link_to "Admin", "/admin"  %></li>
+              <li><%= content_for?(:breadcrumb) ? yield(:breadcrumb) : '' %></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -42,22 +42,14 @@
 
     <div class="container-fluid">
       <div class="row-fluid">
-        <div class="span3">
-          <div class="well sidebar-nav">
-            <ul class="nav nav-list">
-              <li class="nav-header">Types</li>
-              <li><%= link_to "Contents", "/contents"  %></li>
-              <li><%= link_to "Pages", "/pages"  %></li>
-            </ul>
-          </div><!--/.well -->
-        </div><!--/span-->
-        <div class="span9">
+        <div class="span12">
           <%= yield %>
         </div>
       </div><!--/row-->
 
       <footer>
         <p>&copy; 2012</p>
+        <h6 style="font-size:8px">view_paths = <%= controller.view_paths.entries %></h6>
       </footer>
 
     </div> <!-- /container -->
