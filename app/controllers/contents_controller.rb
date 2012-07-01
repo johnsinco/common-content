@@ -14,7 +14,7 @@ class ContentsController < ApplicationController
   end
 
   def edit
-    @content = Content.find(params[:id])
+    @content = Content.find_by_ancestry(params[:ancestors].try(:split,'/'), params[:id]) 
     @content.build_seo unless @content.seo
     @content.resources.build unless @content.resources.size > 5
     @content.child_contents.create(slug:'kidA', title:'KidA') if @content.child_contents.size == 0
@@ -26,7 +26,7 @@ class ContentsController < ApplicationController
   end
 
   def show    # Content.all_entries
-    @content = Content.find(params[:id])
+    @content = Content.find_by_ancestry(params[:ancestors].try(:split,'/'), params[:id])
     respond_with @content
   end
 
@@ -79,7 +79,7 @@ class ContentsController < ApplicationController
   end
 
   def destroy
-    @content = Content.find(params[:id])
+    @content = Content.find_by_ancestry(params[:ancestors].try(:split,'/'), params[:id])
     @content.destroy
 
     respond_to do |format|
@@ -90,7 +90,7 @@ class ContentsController < ApplicationController
   end
 
   def customize_view_paths 
-    c = Content.find(params[:id]) if params[:id]
+    c = Content.find_by_ancestry(params[:ancestors].try(:split, '/'), params[:id]) if params[:id]
     prepend_view_path "app/views/contents/#{c.slug}" if c
   end
 

@@ -4,7 +4,7 @@ class Content
 
   field :slug, type: String
   validates :slug, presence: true, uniqueness: true
-
+  key :slug
 
   field :title, type: String
   validates :title, presence: true
@@ -21,7 +21,17 @@ class Content
 
   # embeds_one :constraint  # the constraints of what fields are required, what child objects can be defined and how many, etc.
 
-  def self.find_by_slug(slug)
-    Content.where(slug: slug).first
+  def ancestry
+    parent_content ? parent_content.ancestry << id : [id]
   end
+
+  def self.find_by_ancestry(ancestry = nil, id)
+    return self.find(id) unless ancestry
+    parent = Content.find(ancestry.shift)
+    while(parent_slug = ancestry.shift and parent_slug != id) do
+      parent = parent.child_contents.find(parent_slug)
+    end if parent
+    parent.child_contents.find(id)
+  end
+
 end

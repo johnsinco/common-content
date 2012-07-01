@@ -1,6 +1,6 @@
 <%- model_class = @content.class -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+  <h1><%=t '.title', :default => "#{@content.title}" %></h1>
 </div>
 
 <dl class="dl-horizontal">
@@ -16,9 +16,7 @@
   <%= link_to t('.back', :default => t("helpers.links.back")),
               contents_path, :class => 'btn'  %>
   <%= link_to t('.edit', :default => t("helpers.links.edit")),
-              edit_content_path(@content), :class => 'btn' %>
-  <%= link_to t('.define', :default => t("helpers.links.define")),
-              edit_content_path(@content), :class => 'btn' %>
+              edit_content_path(@content.ancestry), :class => 'btn' %>
   <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
               content_path(@content),
               :method => 'delete',

@@ -27,7 +27,7 @@
   <% end %>
  <h4>Children</h4>
 <% @content.child_contents.each do |child| %>
-  <%= link_to child.title, url_for([@content, child]) %>
+  <%= link_to child.title, contents_path + '/' + child.ancestry.join('/') %>
 <% end -%>
   <div class="form-actions">
     <%= f.submit nil, :class => 'btn btn-primary' %>
