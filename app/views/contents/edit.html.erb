@@ -19,16 +19,16 @@
   <hr/>
   <h4>Seo</h4>
   <%= f.fields_for :seo do |seo| %>
-    <%= render :partial => 'fields_seo', :locals => {f: seo} %>
+    <%= render :partial => 'seo_fields', :locals => {f: seo} %>
   <% end %>
   <h4>Resources</h4>
-  <%= f.fields_for :resources do |seo| %>
-    <%= render :partial => 'fields_resource', :locals => {f: seo} %>
+  <%= link_to_add_fields "Add Resource", f, :resources %>
+
+  <%= f.fields_for :resources do |res| %>
+    <%= render :partial => 'resource_fields', :locals => {f: res} %>
   <% end %>
  <h4>Children</h4>
-<% @content.child_contents.each do |child| %>
-  <%= link_to child.title, contents_path + '/' + child.ancestry.join('/') %>
-<% end -%>
+ <%= render :partial => 'show_children', object: @content.child_contents %>
   <div class="form-actions">
     <%= f.submit nil, :class => 'btn btn-primary' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),

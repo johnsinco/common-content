@@ -4,6 +4,8 @@ class ContentsController < ApplicationController
 
   before_filter :customize_view_paths
 
+  # helper_method :link_to_add_fields
+
   def index
     @contents = Content.all
     respond_with @contents
@@ -16,7 +18,6 @@ class ContentsController < ApplicationController
   def edit
     @content = Content.find_by_ancestry(params[:ancestors].try(:split,'/'), params[:id]) 
     @content.build_seo unless @content.seo
-    @content.resources.build unless @content.resources.size > 5
     @content.child_contents.create(slug:'kidA', title:'KidA') if @content.child_contents.size == 0
     respond_with @content
   end
@@ -93,5 +94,7 @@ class ContentsController < ApplicationController
     c = Content.find_by_ancestry(params[:ancestors].try(:split, '/'), params[:id]) if params[:id]
     prepend_view_path "app/views/contents/#{c.slug}" if c
   end
+
+
 
 end

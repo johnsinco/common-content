@@ -1,9 +1,10 @@
 <div class="control-group">
-  <%= f.label :title, :class => 'control-label' %>
   <div class="controls">
     <ol>
-    <% show_children.each do |child| %>
-      <%= content_tag :li, child.title %>
+    <% show_children.try :each do |child| %>
+    <li>
+      <%= link_to child.title, contents_path + '/' + child.ancestry.join('/') %>
+    </li>
     <% end %>
     </ol>
   </div>
