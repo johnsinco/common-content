@@ -18,7 +18,7 @@ class ContentsController < ApplicationController
   def edit
     @content = Content.find_by_ancestry(params[:ancestors].try(:split,'/'), params[:id]) 
     @content.build_seo unless @content.seo
-    @content.child_contents.create(slug:'kidA', title:'KidA') if @content.child_contents.size == 0
+    @content.child_contents.create(slug:"#{@content.slug}-kid-#{@content.child_contents.count}", title:"#{@content.slug} Kid") if @content.child_contents.size == 0
     respond_with @content
   end
 

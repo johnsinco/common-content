@@ -1,16 +1,10 @@
 <% # http://stackoverflow.com/questions/187073/jquery-sortables %>
 <div class="">
   <input type='hidden' name='child_order' id='child_order' />
-  <div id="children" class="">
+  <div id="children">
     <% show_children.try :each do |child| %>
     <%= content_tag :div, id: child.id do %>
       <p><%= link_to child.title, contents_path + '/' + child.ancestry.join('/') + '/edit'  %></p>
     <% end; end -%>
   </div>
 </div>
-
-<script type="text/javascript">
-  $("form").submit(function() {
-    $("#child_order").val($("#children").sortable('toArray'))
-  })
-</script>

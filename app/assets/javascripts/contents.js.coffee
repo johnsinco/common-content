@@ -11,3 +11,6 @@ jQuery ->
     event.preventDefault()
   
   $('#children').sortable()  
+
+  $('form').on 'submit', (event) ->
+    $("#child_order").val($("#children").sortable('toArray'))
