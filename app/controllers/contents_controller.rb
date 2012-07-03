@@ -44,8 +44,11 @@ class ContentsController < ApplicationController
   end
 
   def update
-    @content = Content.find(params[:id])
-    # @content.seo_attributes = params[:content]['seo_attributes']
+    @content = Content.find_by_ancestry(params[:ancestors].try(:split,'/'), params[:id])
+    # @content = Content.find(params[:id])
+    # @content.child_order = params[:content][:child_order]
+    # @content.save!
+p "updated content from db #{@content.id} with params #{params[:content]}"
     if @content.update_attributes(params[:content])
       redirect_to contents_path, notice: "#{@content.title} updated."
     else

@@ -4,5 +4,6 @@ Rails.application.routes.draw do
  end
 
   match 'contents/*ancestors/:id/edit' => 'contents#edit' 
+  match 'contents/*ancestors/:id' => 'contents#update', :via => [:put] 
   match 'contents/*ancestors/:id' => 'contents#show' 
 end

@@ -20,7 +20,7 @@ group :assets do
   gem 'less'
   gem 'therubyrhino', :platform => :jruby
   gem 'therubyracer', :platform => :ruby
-  gem 'jquery-ui-rails'
+  # gem 'jquery-ui-rails'
 end
 
 # To use debugger

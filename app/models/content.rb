@@ -34,4 +34,15 @@ class Content
     parent.child_contents.find(id)
   end
 
+  def child_order=(order)
+    order = order.split(',')
+p "child_order is #{order}"
+    child_contents = self.child_contents.sort { |a,b| (order.find_index{|e| e == a.id}) <=> (order.find_index{|e| e == b.id}) }
+p "child_contents = #{child_contents}"
+  end
+
+  def to_param
+    parent_content ? parent_content.id + '/' + id : id
+  end
+
 end

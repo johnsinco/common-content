@@ -1,6 +1,6 @@
 <% # http://stackoverflow.com/questions/187073/jquery-sortables %>
 <div class="">
-  <input type='hidden' name='child_order' id='child_order' />
+  <input type='hidden' name='content[child_order]' id='child_order' />
   <div id="children">
     <% show_children.try :each do |child| %>
     <%= content_tag :div, id: child.id do %>
