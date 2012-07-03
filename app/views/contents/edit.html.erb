@@ -17,7 +17,7 @@
   <%= render :partial => 'fields_new', :locals => {f: f} %>
   <%= render :partial => 'fields_edit', :locals => {f: f} %>
   <hr/>
-  <h4>Seo</h4>
+  <%= link_to_add_fields "+ seo", f, :seo unless @content.seo %>
   <%= f.fields_for :seo do |seo| %>
     <%= render :partial => 'seo_fields', :locals => {f: seo} %>
   <% end %>

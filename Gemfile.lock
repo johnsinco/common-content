@@ -11,7 +11,7 @@ GIT
 PATH
   remote: .
   specs:
-    common-content (0.0.1)
+    common-content (0.0.2)
       RedCloth
       rails (~> 3.2.1)
 
@@ -19,8 +19,6 @@ GEM
   remote: http://rubygems.org/
   specs:
     RedCloth (4.2.9)
-    RedCloth (4.2.9-java)
-    RedCloth (4.2.9-x86-mingw32)
     actionmailer (3.2.6)
       actionpack (= 3.2.6)
       mail (~> 2.4.4)

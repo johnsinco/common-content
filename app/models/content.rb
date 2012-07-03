@@ -11,10 +11,10 @@ class Content
 
   field :body, type: Textile  # optional html block of text for this content
 
-  embeds_one :seo  # optional SEO fields
+  embeds_one :seo, class_name: 'Content::Seo'  # optional SEO fields
   accepts_nested_attributes_for :seo   # mongoid BUG see http://stackoverflow.com/questions/9392315/mongoid-and-nested-form-for-embeds-one-document
 
-  embeds_many :resources   # optional 1-n resources like images, videos, REST urls, etc
+  embeds_many :resources, class_name: 'Content::Resource'   # optional 1-n resources like images, videos, REST urls, etc
   accepts_nested_attributes_for :resources # mongoid BUG see http://stackoverflow.com/questions/9392315/mongoid-and-nested-form-for-embeds-one-document
 
   recursively_embeds_many  # optionaal 1-n embedded child Content objects, the editable field controls if user can change
@@ -46,4 +46,22 @@ class Content
     parent_content ? parent_content.to_param + '/' + id : id
   end
 
+  class Resource
+    include Mongoid::Document
+    embedded_in :content
+
+    field :slug, type: String
+    field :uri, type: String  # the URI of the entity we're linking to
+    field :content_type, type: String  # mime type if there is one
+  end
+
+  class Seo
+    include Mongoid::Document
+    embedded_in :content
+
+    field :description, type: String
+    field :keywords, type: String
+    field :metatitle, type: String
+    # validates :description, :keywords, :metatitle, presence: true
+  end
 end
