@@ -36,13 +36,14 @@ class Content
   end
 
   def child_order=(order)
+    return unless order
     order = order.split(',')
     order.each {|e| e.strip!}
     self.child_contents = self.child_contents.sort_by {|kid| order.find_index(kid.id) }
   end
 
   def to_param
-    parent_content ? parent_content.id + '/' + id : id
+    parent_content ? parent_content.to_param + '/' + id : id
   end
 
 end

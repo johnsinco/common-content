@@ -12,5 +12,5 @@ jQuery ->
   
   $('#children').sortable()  
 
-  $('form').on 'submit', (event) ->
-    $("#child_order").val($("#children").sortable('toArray'))
+  # $('form').on 'submit', (event) ->
+  #   $("#child_order").val($("#children").sortable('toArray'))
