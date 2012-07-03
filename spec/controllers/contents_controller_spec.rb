@@ -19,7 +19,7 @@ describe ContentsController do
       c = assigns(:content)
       c.title.should == 'foo'
       c.title = 'updated'
-      put :update, id: c.id, content: c
+      put :update, id: c.id, content: c.attributes
       Content.find(c.id).title.should == 'updated'
     end
     it 'can update the fields in the embedded SEO document' do

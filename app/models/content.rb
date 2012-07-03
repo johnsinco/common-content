@@ -36,9 +36,8 @@ class Content
 
   def child_order=(order)
     order = order.split(',')
-p "child_order is #{order}"
-    child_contents = self.child_contents.sort { |a,b| (order.find_index{|e| e == a.id}) <=> (order.find_index{|e| e == b.id}) }
-p "child_contents = #{child_contents}"
+    order.each {|e| e.strip!}
+    self.child_contents = self.child_contents.sort_by {|kid| order.find_index(kid.id) }
   end
 
   def to_param

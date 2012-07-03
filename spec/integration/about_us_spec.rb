@@ -28,8 +28,7 @@ describe 'About Us Page' do
     end
     it 'child contents can be re-ordered' do
       @about.child_contents.first.slug.should == 'staff'
-      @about.child_content_ids[0].should == 'staff'
-      @about.child_content_ids[] = ['charity', 'jobs', 'staff']
+      @about.child_order = "charity, jobs, staff"
       @about.save!
       @about.child_contents.first.slug.should == 'charity'
       @about.child_contents.last.slug.should == 'staff'
