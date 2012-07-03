@@ -18,7 +18,7 @@ class ContentsController < ApplicationController
   def edit
     @content = Content.find_by_ancestry(params[:ancestors].try(:split,'/'), params[:id]) 
     @content.build_seo unless @content.seo
-    @content.child_contents.create(slug:"#{@content.slug}-kid-#{@content.child_contents.count}", title:"#{@content.slug} Kid") if @content.child_contents.size == 0
+    # @content.child_contents.create(slug:"#{@content.slug}-kid-#{@content.child_contents.count}", title:"#{@content.slug} Kid") if @content.child_contents.size == 0
     respond_with @content
   end
 
@@ -45,10 +45,6 @@ class ContentsController < ApplicationController
 
   def update
     @content = Content.find_by_ancestry(params[:ancestors].try(:split,'/'), params[:id])
-    # @content = Content.find(params[:id])
-    # @content.child_order = params[:content][:child_order]
-    # @content.save!
-p "updated content from db #{@content.id} with params #{params[:content]}"
     if @content.update_attributes(params[:content])
       redirect_to contents_path, notice: "#{@content.title} updated."
     else

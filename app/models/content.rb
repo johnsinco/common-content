@@ -18,6 +18,7 @@ class Content
   accepts_nested_attributes_for :resources # mongoid BUG see http://stackoverflow.com/questions/9392315/mongoid-and-nested-form-for-embeds-one-document
 
   recursively_embeds_many  # optionaal 1-n embedded child Content objects, the editable field controls if user can change
+  accepts_nested_attributes_for :child_contents # mongoid BUG see http://stackoverflow.com/questions/9392315/mongoid-and-nested-form-for-embeds-one-document
 
   # embeds_one :constraint  # the constraints of what fields are required, what child objects can be defined and how many, etc.
 
