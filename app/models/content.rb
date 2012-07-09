@@ -21,6 +21,13 @@ class Content
   accepts_nested_attributes_for :child_contents # mongoid BUG see http://stackoverflow.com/questions/9392315/mongoid-and-nested-form-for-embeds-one-document
 
   # embeds_one :constraint  # the constraints of what fields are required, what child objects can be defined and how many, etc.
+  before_save do 
+p "calling before_save @child_order = #{@child_order}"
+    return unless @child_order
+    order = @child_order.split(',')
+    order.each {|e| e.strip!}
+    self.child_contents = self.child_contents.sort_by {|kid| order.index(kid.id) or -1 }
+  end
 
   def ancestry
     parent_content ? parent_content.ancestry << id : [id]
@@ -36,11 +43,9 @@ class Content
   end
 
   def child_order=(order)
-    return unless order
-    order = order.split(',')
-    order.each {|e| e.strip!}
-    self.child_contents = self.child_contents.sort_by {|kid| order.find_index(kid.id) }
+    @child_order = order
   end
+  def child_order; end
 
   def to_param
     parent_content ? parent_content.to_param + '/' + id : id

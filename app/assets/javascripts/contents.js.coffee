@@ -7,10 +7,10 @@ jQuery ->
   $('form').on 'click', '.add_fields', (event) ->
     time = new Date().getTime()
     regexp = new RegExp($(this).data('id'), 'g')
-    $(this).before($(this).data('fields').replace(regexp, time))
+    $($(this).data('enclosing')).prepend($(this).data('fields').replace(regexp, time))
     event.preventDefault()
   
-  $('#children').sortable()  
+  $('#children').sortable({ items: '.embedded-child'})  
 
-  # $('form').on 'submit', (event) ->
-  #   $("#child_order").val($("#children").sortable('toArray'))
+  $('form').on 'submit', (event) ->
+    $("#content_child_order").val($("#children").sortable('toArray'))

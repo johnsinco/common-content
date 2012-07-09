@@ -28,8 +28,14 @@
     <%= render :partial => 'resource_fields', :locals => {f: res} %>
   <% end %>
  <h4>Children</h4>
-  <%= link_to_add_fields "Add Child", f, :child_contents %>
- <%= render :partial => 'show_children', object: @content.child_contents %>
+ <%= f.hidden_field :child_order %>
+  <%= link_to_add_fields "Add Child", f, :child_contents, '#children' %>
+  <div id="children">
+  <%= f.fields_for :child_contents do |child| %>
+    <%= render :partial => 'child_content_fields', :locals => {f: child} %>
+  <% end %>
+  </div>
+
   <div class="form-actions">
     <%= f.submit nil, :class => 'btn btn-primary' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
