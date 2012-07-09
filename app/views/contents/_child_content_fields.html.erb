@@ -1,6 +1,6 @@
 <% child_index = (child_index or f.object.id) %>
 <div id='<%= child_index %>' class="embedded-child">
-<%= content_tag :h4, f.object.try(:title) or 'New Child' %>
+<%= link_to f.object.title, f.object %>
 <fieldset>
   <%= render :partial => 'fields_new', :locals => {f: f} %>
   <%= render :partial => 'fields_edit', :locals => {f: f} %>

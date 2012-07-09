@@ -1,4 +1,4 @@
-<%- model_class = @content.class -%>
+<%- model_class = @content.class; @ancestry = @content.ancestry -%>
 <div class="page-header">
   <h3><%=t '.title', :default => t('helpers.titles.define', :model => model_class.model_name.human,
                    :default => "Edit #{@content.slug or model_class.model_name.human}") %></h3>
@@ -22,11 +22,12 @@
     <%= render :partial => 'seo_fields', :locals => {f: seo} %>
   <% end %>
   <h4>Resources</h4>
-  <%= link_to_add_fields "Add Resource", f, :resources %>
-
+  <%= link_to_add_fields "Add Resource", f, :resources, '#resources' %>
+  <div id="resources">
   <%= f.fields_for :resources do |res| %>
     <%= render :partial => 'resource_fields', :locals => {f: res} %>
   <% end %>
+  </div>
  <h4>Children</h4>
  <%= f.hidden_field :child_order %>
   <%= link_to_add_fields "Add Child", f, :child_contents, '#children' %>

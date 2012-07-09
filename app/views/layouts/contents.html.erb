@@ -20,25 +20,7 @@
   </head>
   <body>
 
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container-fluid">
-          <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="#">Common Content</a>
-          <div class="container-fluid nav-collapse">
-            <ul class="nav">
-              <li><%= link_to "Contents", "/contents"  %></li>
-              <li><%= link_to "Admin", "/admin"  %></li>
-              <li><%= content_for?(:breadcrumb) ? yield(:breadcrumb) : '' %></li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div>
+  <%= render partial: 'navigation' %>  
 
     <div class="container-fluid">
       <div class="row-fluid">
