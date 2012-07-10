@@ -1,4 +1,5 @@
 <div id='<%= f.object.id %>' class="resource">
 <%= render partial: 'resource_types', locals: {f: f} %>
-<%= render partial: (f.object.content_type or 'resource_edit_fields'), locals: {f: f} %>
+<div class="resource-fields">
+</div>
 </div>

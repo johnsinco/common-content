@@ -23,4 +23,12 @@ module ContentsHelper
               data: {id: id, fields: fields.gsub("\n", ""), enclosing: enclosing_element})
   end
 
+  def resource_edit_view
+    type = params[:resource_type]
+    if lookup_context.exists?(type, 'contents', true)
+      render partial: type 
+    else
+      render partial: 'resource_fields'
+    end
+  end
 end

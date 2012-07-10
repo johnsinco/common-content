@@ -11,8 +11,7 @@ jQuery ->
     event.preventDefault()
 
   $('form').on 'change', '.select_resource_type', (event) ->
-    alert($(this).val())
-    $(this).parents('.control-group').load($(location).attr('href')+'/'+$(this).val())
+    $(this).parents('.control-group').prepend($(this).children('option:selected').data('content'))
 
   $('#children').sortable({ items: '.embedded-child'})  
   $('#resources').sortable({ items: 'div.resource'})  
