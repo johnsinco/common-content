@@ -1,8 +1,12 @@
 <% child_index = (child_index or f.object.id) %>
-<div id='<%= child_index %>' class="embedded-child">
-<%= link_to f.object.title, f.object %>
 <fieldset>
+  <div id='<%= child_index %>' class="embedded-child">
+  <%= link_to f.object.title, f.object %>
   <%= render :partial => 'fields_new', :locals => {f: f} %>
   <%= render :partial => 'fields_edit', :locals => {f: f} %>
+  <div class="controls">
+    <%= f.hidden_field :_destroy %>
+    <%= link_to "delete", '#', class: "remove_fields btn btn-mini btn-danger" %>
+  </div>
 </fieldset>
 </div>

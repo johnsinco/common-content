@@ -15,11 +15,11 @@ class Content
   accepts_nested_attributes_for :seo   # mongoid BUG see http://stackoverflow.com/questions/9392315/mongoid-and-nested-form-for-embeds-one-document
 
   embeds_many :resources, class_name: 'Content::Resource'   # optional 1-n resources like images, videos, REST urls, etc
-  accepts_nested_attributes_for :resources # mongoid BUG see http://stackoverflow.com/questions/9392315/mongoid-and-nested-form-for-embeds-one-document
+  accepts_nested_attributes_for :resources, allow_destroy: true # mongoid BUG see http://stackoverflow.com/questions/9392315/mongoid-and-nested-form-for-embeds-one-document
   attr_accessor :resource_order
 
   recursively_embeds_many  # optionaal 1-n embedded child Content objects, the editable field controls if user can change
-  accepts_nested_attributes_for :child_contents # mongoid BUG see http://stackoverflow.com/questions/9392315/mongoid-and-nested-form-for-embeds-one-document
+  accepts_nested_attributes_for :child_contents, allow_destroy: true # mongoid BUG see http://stackoverflow.com/questions/9392315/mongoid-and-nested-form-for-embeds-one-document
   attr_accessor :child_order
 
   # embeds_one :constraint  # the constraints of what fields are required, what child objects can be defined and how many, etc.
