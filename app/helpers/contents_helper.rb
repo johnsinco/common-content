@@ -23,5 +23,4 @@ module ContentsHelper
               data: {id: id, fields: fields.gsub("\n", ""), enclosing: enclosing_element})
   end
 
-
 end

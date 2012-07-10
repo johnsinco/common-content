@@ -17,11 +17,14 @@
   <%= render :partial => 'fields_new', :locals => {f: f} %>
   <%= render :partial => 'fields_edit', :locals => {f: f} %>
   <hr/>
-  <%= link_to_add_fields "+ seo", f, :seo unless @content.seo %>
+  <%= link_to_add_fields "+ seo", f, :seo, '#seo' unless @content.seo %>
+  <div id="seo">
   <%= f.fields_for :seo do |seo| %>
     <%= render :partial => 'seo_fields', :locals => {f: seo} %>
   <% end %>
+</div>
   <h4>Resources</h4>
+  <%= f.hidden_field :resource_order %>
   <%= link_to_add_fields "Add Resource", f, :resources, '#resources' %>
   <div id="resources">
   <%= f.fields_for :resources do |res| %>

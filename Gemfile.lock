@@ -11,14 +11,14 @@ GIT
 PATH
   remote: .
   specs:
-    common-content (0.0.2)
+    common-content (0.0.4)
       RedCloth
       rails (~> 3.2.1)
 
 GEM
   remote: http://rubygems.org/
   specs:
-    RedCloth (4.2.9)
+    RedCloth (4.2.9-java)
     actionmailer (3.2.6)
       actionpack (= 3.2.6)
       mail (~> 2.4.4)
@@ -95,7 +95,7 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    mime-types (1.18)
+    mime-types (1.19)
     mongo (1.6.2)
       bson (~> 1.6.2)
     mongoid (2.4.11)

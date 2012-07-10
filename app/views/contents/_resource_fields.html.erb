@@ -1,23 +1,4 @@
-<div id='<%= f.object.id %>'>
-<fieldset>
-  <div class="control-group">
-    <%= f.label :slug, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :slug, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :uri, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :uri, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :type, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :content_type, :class => 'text_field' %>
-    </div>
-  </div>
-<hr/>
-</fieldset>
+<div id='<%= f.object.id %>' class="resource">
+<%= render partial: 'resource_types', locals: {f: f} %>
+<%= render partial: (f.object.content_type or 'resource_edit_fields'), locals: {f: f} %>
 </div>

@@ -1,0 +1,7 @@
+  <div class="control-group">
+    <%= f.label :type, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.select :content_type, [['Image','image'], ['URL', 'url']], {}, 
+            class: 'select_tag select_resource_type', data: { partial_url:'http://foo.com' } %>
+    </div>
+  </div>
