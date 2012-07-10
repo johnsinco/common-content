@@ -1,7 +1,9 @@
   <div class="control-group">
     <%= f.label :type, :class => 'control-label' %>
-    <% image_content = render(partial: 'resource_edit_fields', locals:{f: f}) 
-        url_content = render(partial: 'url', locals:{f: f})  %>
+    <% 
+        image_content = render(partial: 'resource_edit_fields', locals:{f: f}) 
+        url_content = render(partial: 'url', locals:{f: f})  
+     %>
     <div class="controls">
       <%= f.select :content_type, [['Image','image', {'data-content' => image_content.gsub('\n','')}], 
                                   ['URL', 'url', {'data-content' => url_content.gsub('\n','')}]], {}, 

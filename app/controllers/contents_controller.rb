@@ -94,14 +94,4 @@ class ContentsController < ApplicationController
     prepend_view_path "app/views/contents/#{c.slug}" if c
   end
 
-  def resource_edit
-    type = params[:resource_type]
-    if lookup_context.exists?(type, 'contents', true)
-      render partial: type 
-    else
-      render partial: 'resource_fields'
-    end
-  end
-
-
 end
